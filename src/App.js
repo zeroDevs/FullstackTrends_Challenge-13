@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Chart from './components/Chart';
 import Rank from './components/Rank';
-import Newsletter from './components/Newsletter';
+import Newsletter from './components/Newsletter/Newsletter';
 import Data from './components/Data';
 import Footer from './components/Footer';
 import chartData from './data.json';
