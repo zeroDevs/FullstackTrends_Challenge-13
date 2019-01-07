@@ -95,8 +95,10 @@ class App extends Component {
         currentCatIndexGlobal = index;
         this.setState({
             rawData: dataExtractor(index)
+        },
+        ()=>{
+            this.getData(this.state.rawData.langArray[0]);
         })
-        this.getData(this.state.rawData.langArray[0]);
     }
 
     render() {
