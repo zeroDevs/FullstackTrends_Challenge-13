@@ -1,0 +1,26 @@
+#newsletter .content {
+    background: #FFFFFF;
+    padding: 50px
+}
+
+.ml-form-embedWrapper {
+    max-width: 50%!important;
+    width: 50%!important;
+}
+
+#mlb2-1154434.ml-form-embedContainer .ml-form-embedWrapper {
+    background: transparent!important;
+}
+
+.ml-form-embedContent h4 {
+    font-family: 'Ubuntu', sans-serif!important;
+    color: var(--five)!important;
+    font-size: 2em!important;
+    text-align: center!important;
+}
+
+.ml-form-embedContent p {
+    color: rgb(107, 107, 107)!important;
+    text-align: center!important;
+    margin-bottom: 30px!important
+}

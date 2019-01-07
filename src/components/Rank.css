@@ -1,0 +1,11 @@
+.lang-links {
+    cursor: pointer;
+}
+
+.rank {
+    border: 2px solid #e24e42;
+    border-radius: 30px;
+    padding-top: 50px;
+    text-decoration: underline;
+    color: #e24e42;
+}

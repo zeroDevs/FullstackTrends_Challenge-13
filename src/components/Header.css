@@ -1,0 +1,37 @@
+.nav-buttons {
+    margin-left: auto;
+    padding: 15px;
+}
+
+#header a {
+    color: var(--three)
+}
+
+#header .active {
+    color: #fff
+}
+
+#header a:hover {
+    color: #fff
+}
+
+.scroll {
+    background: rgba(255, 255, 255, 1);
+    height: 65px
+}
+
+.smLogo > a > img {
+    height: 40px;
+    position: relative;
+}
+
+.scroll > .nav-buttons {
+    position: relative;
+}
+
+
+  @media only screen and (max-width: 800px) {
+    #header {
+        background: #fff
+    }
+}

@@ -1,0 +1,59 @@
+.footer {
+    background: #201e1c;
+}
+
+footer .socials i {
+    padding: 10px 20px 0 0;
+    font-size: 40px
+}
+
+footer .socials i:hover {
+    color: var(--three)
+}
+
+.credits h5 {
+    margin-top: 20px;
+    color: #8d8d8d;
+    font-family: 'Ubuntu', sans-serif;
+}
+.credits li {
+    list-style-type: none;
+    color: #fff
+}
+.credits li:hover {
+    color: var(--one);
+}
+.credits a {
+    text-decoration: none;
+}
+
+.copyright {
+    background-color: #0e0f0f;
+    color: #8d8d8d;
+    text-align: center;
+    padding: 20px
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        padding: 0 30px;
+        text-align: center
+    }
+    .footer a {
+        margin-top: 30px
+    }
+    .credits {
+        margin: 30px auto 0px auto
+    }
+    .credits ul {
+        padding: 0!important
+    }
+  }
+  @media only screen and (min-width: 767px) {
+    .footer .credits {
+        text-align: right
+    }
+
+}

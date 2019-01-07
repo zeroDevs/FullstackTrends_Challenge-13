@@ -1,0 +1,14 @@
+.center {
+    display: flex;
+    justify-content: center;
+    margin: 125px auto 0 auto
+}
+
+.center > div  {
+    width: 25%;
+}
+
+.center > div > button {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.219)
+}

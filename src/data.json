@@ -1,0 +1,193 @@
+[
+    [
+        {
+            "name": "React",
+            "devLove": 100,
+            "gJobDemand": 39.43,
+            "usJobDemand": 39.41,
+            "supJobDemand": 45.63,
+            "remJobDemand": 41.41
+
+        },
+        {
+            "name": "Angular",
+            "devLove": 60,
+            "gJobDemand": 40.56,
+            "usJobDemand": 42.97,
+            "supJobDemand": 24.67,
+            "remJobDemand": 37.18
+
+        },
+        {
+            "name": "Redux",
+            "devLove": 80,
+            "gJobDemand": 9.93,
+            "usJobDemand": 8.88,
+            "supJobDemand": 17.69,
+            "remJobDemand": 9.42
+
+        },
+        {
+            "name": "Vue",
+            "devLove": 100,
+            "gJobDemand": 6.86,
+            "usJobDemand": 5.10,
+            "supJobDemand": 6.40,
+            "remJobDemand": 7.29
+
+        },
+        {
+            "name": "Apollo+GraphQL",
+            "devLove": 100,
+            "gJobDemand": 3.2,
+            "usJobDemand": 3.61,
+            "supJobDemand": 5.58,
+            "remJobDemand": 4.67
+
+        }
+    ],
+
+    [
+        {
+            "name": "Android (Java, Kotlin)",
+            "devLove": 60,
+            "gJobDemand": 29.48,
+            "usJobDemand": 37.66,
+            "supJobDemand": 39.76,
+            "remJobDemand": 41.71
+
+        },
+        {
+            "name": "iOS (Swift)",
+            "devLove": 60,
+            "gJobDemand": 36.77,
+            "usJobDemand": 33.53,
+            "supJobDemand": 38.14,
+            "remJobDemand": 39.38
+
+        },
+        {
+            "name": "React Native",
+            "devLove": 80,
+            "gJobDemand": 17.98,
+            "usJobDemand": 22.09,
+            "supJobDemand": 19.87,
+            "remJobDemand": 14.70
+
+        },
+        {
+            "name": "Cordova",
+            "devLove": 40,
+            "gJobDemand": 14.95,
+            "usJobDemand": 6.09,
+            "supJobDemand": 1.7,
+            "remJobDemand": 3.90
+
+        },
+        {
+            "name": "Flutter",
+            "devLove": 100,
+            "gJobDemand": 0.80,
+            "usJobDemand": 0.60,
+            "supJobDemand": 0.51,
+            "remJobDemand": 0.30
+
+        }
+    ],
+
+    [
+        {
+            "name": "JavaScript",
+            "devLove": 80,
+            "gJobDemand": 27.88,
+            "usJobDemand": 20.86,
+            "supJobDemand": 30.10,
+            "remJobDemand": 23.40
+
+        },
+        {
+            "name": "Java",
+            "devLove": 60,
+            "gJobDemand": 34.79,
+            "usJobDemand": 33.17,
+            "supJobDemand": 15.93,
+            "remJobDemand": 31.57
+
+        },
+        {
+            "name": "Python",
+            "devLove": 80,
+            "gJobDemand": 21.87,
+            "usJobDemand": 26.62,
+            "supJobDemand": 20.74,
+            "remJobDemand": 30.49
+
+        },
+        {
+            "name": "C++",
+            "devLove": 60,
+            "gJobDemand": 14.71,
+            "usJobDemand": 17.74,
+            "supJobDemand": 15.76,
+            "remJobDemand": 13.22
+
+        },
+        {
+            "name": "Go",
+            "devLove": 100,
+            "gJobDemand": 0.73,
+            "usJobDemand": 1.58,
+            "supJobDemand": 17.46,
+            "remJobDemand": 1.29
+
+        }
+    ],
+
+    [
+        {
+            "name": "Node.js",
+            "devLove": 100,
+            "gJobDemand": 21.76,
+            "usJobDemand": 13.14,
+            "supJobDemand": 26.56,
+            "remJobDemand": 12.79
+
+        },
+        {
+            "name": "Docker",
+            "devLove": 80,
+            "gJobDemand": 25.60,
+            "usJobDemand": 22.57,
+            "supJobDemand": 16.03,
+            "remJobDemand": 22.49
+
+        },
+        {
+            "name": "AWS",
+            "devLove": 60,
+            "gJobDemand": 34.92,
+            "usJobDemand": 50.48,
+            "supJobDemand": 33.71,
+            "remJobDemand": 51.79
+
+        },
+        {
+            "name": "PosrgreSQL",
+            "devLove": 100,
+            "gJobDemand": 12.27,
+            "usJobDemand": 8.27,
+            "supJobDemand": 13.68,
+            "remJobDemand": 7.88
+
+        },
+        {
+            "name": "Redis",
+            "devLove": 100,
+            "gJobDemand": 5.42,
+            "usJobDemand": 5.52,
+            "supJobDemand": 10.00,
+            "remJobDemand": 5.01
+
+        }
+    ]
+]
