@@ -47,13 +47,6 @@ class App extends Component {
         this.state = {
             cData: {},
             currentTopic: chartData[currentCatIndexGlobal][0].name,
-            /*
-            currentCatIndex :-
-                Web---------------------> 0
-                Mobile------------------> 1
-                Programming Language----> 2
-                Backend-----------------> 3
-            */
             rawData: dataExtractor(currentCatIndexGlobal),
         }
     }
