@@ -99,7 +99,7 @@ class App extends Component {
         return (
             <div id="top">
                 <Header />
-                <Navigation onNavClick={this.onNavClick}/>
+                <Navigation onNavClick={this.onNavClick} currentCategoryIndex={currentCatIndexGlobal}/>
                 <section className="trends">
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
