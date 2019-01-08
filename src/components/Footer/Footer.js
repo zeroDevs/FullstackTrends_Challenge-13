@@ -17,19 +17,19 @@ const Footer = () => {
                             <a className="navbar-brand pb-3" href="/#"><img src={logo} alt="logo" height="50" /></a>
                             <p className="text-muted text-justify">Dedicated to monitoring the top 5 job demands in the 5 categories: Web, Mobile, Programming Languages, Backend</p>
                             <div className="socials text-white pt-2">
-                                <i className="fab fa-medium"></i>
-                                <i className="fab fa-twitter-square"></i>
-                                <i className="fab fa-github-square"></i>
+                                <a href="https://medium.com/zerotomastery" target='_blank' rel='noopener noreferrer'><i className="fab fa-medium"></i></a>
+                                <a href="https://twitter.com/AndreiNeagoie" target='_blank' rel='noopener noreferrer'><i className="fab fa-twitter-square"></i></a>
+                                <a href="https://github.com/zero-to-mastery" target='_blank' rel='noopener noreferrer'><i className="fab fa-github-square"></i></a>
                             </div>
                         </div>
 
                         <div className="credits col-md-7 col-xs-6">
                             <h5 className="pt-2">Brought to you by</h5>
                             <ul>
-                                <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"><li>Zero To Mastery</li></a>
-                                <a href="https://github.com/anantankur"><li>Ankur Anant</li></a>
-                                <a href="https://github.com/Dhaval1403"><li>Dhaval Mehta</li></a>
-                                <a href="https://github.com/MattCSmith"><li>Matt Smith</li></a>
+                                <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/" target='_blank' rel='noopener noreferrer'><li>Zero To Mastery</li></a>
+                                <a href="https://github.com/anantankur" target='_blank' rel='noopener noreferrer'><li>Ankur Anant</li></a>
+                                <a href="https://github.com/Dhaval1403" target='_blank' rel='noopener noreferrer'><li>Dhaval Mehta</li></a>
+                                <a href="https://github.com/MattCSmith" target='_blank' rel='noopener noreferrer'><li>Matt Smith</li></a>
                             </ul>
                         </div>
                     </div>
