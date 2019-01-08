@@ -8,6 +8,7 @@ import Newsletter from './components/Newsletter/Newsletter';
 import Data from './components/Data/Data';
 import Footer from './components/Footer/Footer';
 import chartData from './data.json';
+const fetch = require('node-fetch');
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
@@ -48,11 +49,21 @@ class App extends Component {
             cData: {},
             currentTopic: chartData[currentCatIndexGlobal][0].name,
             rawData: dataExtractor(currentCatIndexGlobal),
+            contributors: []
         }
+    }
+
+    fetchContributors = async () => {
+        await fetch('https://api.github.com/repos/zeroDevs/coding_challenge-13/contributors')
+            .then(res => res.json())
+            .then(json => this.setState({
+                contributors: json
+            }));
     }
 
     componentDidMount() {
         this.getData(this.state.currentTopic);
+        this.fetchContributors()
     }
 
     getData(currentSelection) {
@@ -95,7 +106,7 @@ class App extends Component {
     }
 
     render() {
-        const {cData, rawData, currentTopic} = this.state;
+        const {cData, rawData, currentTopic, contributors} = this.state;
         return (
             <div id="top">
                 <Header />
@@ -110,7 +121,7 @@ class App extends Component {
                 </section>
                 <Newsletter />
                 <Data chartData={cData} location={false} />
-                <Footer />
+                <Footer contrib={contributors}/>
             </div>
         );
     }
