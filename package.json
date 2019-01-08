@@ -5,6 +5,8 @@
   "homepage": "https://zeroDevs.github.io/coding_challenge-13",
   "dependencies": {
     "chart.js": "^2.7.3",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "react": "^16.6.3",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.3",
