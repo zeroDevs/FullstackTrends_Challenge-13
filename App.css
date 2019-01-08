@@ -29,6 +29,17 @@ body {
 
 .button-primary {
   color: var(--one);
+  padding: 8px ;
+  border-radius: 15px;
+  border: 1px solid var(--one);
+  margin: 0 10px;
+  background: transparent;
+  cursor: pointer !important;
+  box-shadow:rgba(0,0,0,0.8) 0px 5px 15px,
+     inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+a .button-primary {
+  color: var(--one);
   padding: 8px 30px;
   border-radius: 15px;
   border: 1px solid var(--one);
@@ -38,6 +49,7 @@ body {
   box-shadow:rgba(0,0,0,0.8) 0px 5px 15px,
      inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
+
 
 .button-primary:focus {
   outline: 0;
@@ -99,4 +111,7 @@ h2 {
 .zone:hover {
 
   box-shadow: rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+.nav-row{
+  padding: 5px;
 }
