@@ -4,7 +4,8 @@
 }
 
 #header a {
-    color: var(--three)
+    color: var(--three);
+    margin-bottom: 7px;
 }
 
 #header .active {
@@ -13,6 +14,10 @@
 
 #header a:hover {
     color: #fff
+}
+
+.logo-active{
+    transition: height 0.3s;
 }
 
 .scroll {
