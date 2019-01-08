@@ -8,7 +8,6 @@ import Newsletter from './components/Newsletter/Newsletter';
 import Data from './components/Data/Data';
 import Footer from './components/Footer/Footer';
 import chartData from './data.json';
-const fetch = require('node-fetch');
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
