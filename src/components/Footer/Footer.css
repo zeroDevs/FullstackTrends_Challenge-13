@@ -34,6 +34,9 @@ footer .socials i:hover {
     padding: 20px
 }
 
+.fab {
+    color: #ffffff;
+}
 
 
 @media only screen and (max-width: 800px) {
