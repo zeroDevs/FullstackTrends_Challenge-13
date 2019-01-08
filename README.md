@@ -17,7 +17,7 @@ Hmm...you see that it is a React project. How can you improve this codebase and 
 You start looking at the code... first thing you do is:
 1. `git clone` this repository. 
 2. `npm install`
-3. `npm run `
+3. `npm start `
 
 Great, you have built the project locally! Now it's time to start impressing your bosses at fullstacktrends! What should you do first? It is up to you, they have give you some freedom, but looking at the code initially, there are several places you can help them:
 - There are a few bugs where `NaN` is shown on the website
