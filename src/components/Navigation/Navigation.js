@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navigation.css';
 
-const Navigation = ({ onNavClick, currentCategoryIndex }) => (
+const Navigation = ({ onNavClick, currentCategoryIndex }) => {
   const isActive = (categoryIndex) => {
         return `button-primary${categoryIndex===currentCategoryIndex?' active':''}`;
     }
