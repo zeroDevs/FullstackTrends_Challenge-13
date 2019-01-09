@@ -22,7 +22,7 @@
 }
 
 .more {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #fff;
     font-family: Helvetica;
 }
@@ -45,11 +45,60 @@
   .wrapper-data {
     flex-direction: column;
   }
-  .container-grid {
+    .container-grid {
     width: auto;
   }
   .source-chart {
       margin-top: 0;
+  }
+  .trends {
+    width: 85vw;  
+}
+}
+
+/* IPhone 5/SE */
+@media only screen and (max-width: 320px), (max-height: 320px) {
+  .arrow2 {
+      display: none;
+    }
+
+  .container-grid .tooltip1:hover .top {
+        display: none;
+    }
+
+  .trends {
+    width: 96vw;  
+  }
+  
+  .container-grid {
+    width: auto;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 70px);
+  }
+
+  .source-chart {
+    width: auto;
+  }
+
+  .more {
+    font-size: 3.8rem;
+    color: #fff;
+  }
+
+  .mb-4 {
+    margin: 1rem;
+  }
+  
+} 
+
+/* Other divices */
+@media only screen and (max-width: 414px), (max-height: 414px) {
+  .arrow2 {
+    display: none;
+  }
+
+  .mb-4 {
+    margin: 1rem;
   }
 }
 
