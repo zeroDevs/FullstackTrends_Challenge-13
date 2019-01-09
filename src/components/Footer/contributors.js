@@ -38,7 +38,7 @@ const Contrib = ({ contributors }) => {
                 if (prevContributions[user.login])
                   user.contributions = user.contributions + prevContributions[user.login];
                 return (
-                  <a
+                  <a key={i}
                     className="col-xs-12 col-sm-6 col-md-6 col-lg-4 text-center"
                     href={user.html_url}
                   >
