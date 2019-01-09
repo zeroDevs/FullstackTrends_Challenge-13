@@ -2,8 +2,9 @@ import React from 'react';
 import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo1alt.png';
+import Contrib from './contributors.js';
 
-const Footer = () => (
+const Footer = ({ contrib }) => (
   <footer>
     <img src={wave} alt="" style={{ width: '100%' }} />
     <div className="footer py-5">
@@ -53,6 +54,7 @@ const Footer = () => (
               <a href="https://github.com/MattCSmith" target="_blank" rel="noopener noreferrer">
                 <li>Matt Smith</li>
               </a>
+              <Contrib contributors={contrib}/>
             </ul>
           </div>
         </div>
