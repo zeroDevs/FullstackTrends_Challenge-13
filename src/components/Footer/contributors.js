@@ -27,7 +27,7 @@ const Contrib = ({ contributors }) => {
             </button>
           </div>
           <div className="modal-body row">
-            {contributors.map(user => {
+            {contributors.map((user,index) => {
               const prevContributions = {
                 MattCSmith: 74,
                 aneagoie: 30,
@@ -38,7 +38,7 @@ const Contrib = ({ contributors }) => {
               if (prevContributions[user.login])
                 user.contributions += prevContributions[user.login];
               return (
-                <a
+                <a key ={index}
                   className="col-xs-12 col-sm-6 col-md-6 col-lg-4 text-center"
                   href={user.html_url}
                 >
