@@ -3,6 +3,7 @@ import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo1alt.png';
 import Contrib from './contributors.js';
+import 'tachyons';
 
 const Footer = ({ contrib }) => (
   <footer>
@@ -20,17 +21,16 @@ const Footer = ({ contrib }) => (
             </p>
             <div className="socials text-white pt-2">
               <a href="https://medium.com/zerotomastery" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-medium" />
+                <i className="grow fab fa-medium" />
               </a>
               <a href="https://twitter.com/AndreiNeagoie" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter-square" />
+                <i className="grow fab fa-twitter-square" />
               </a>
               <a
                 href="https://github.com/zero-to-mastery"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-github-square" />
+                rel="noopener noreferrer">
+                <i className="grow fab fa-github-square" />
               </a>
             </div>
           </div>
