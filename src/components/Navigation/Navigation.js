@@ -38,5 +38,5 @@ const Navigation = ({ onNavClick, currentCategoryIndex }) => {
     </div>
   </div>
 );
-
+}
 export default Navigation;
