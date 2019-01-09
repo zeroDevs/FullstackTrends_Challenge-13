@@ -2,12 +2,11 @@ import React from 'react';
 import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo1alt.png';
-import Contrib from './contributors.js';
-import 'tachyons';
+import Contrib from './contributors';
 
 const Footer = ({ contrib }) => (
   <footer>
-    <img src={wave} alt="" style={{ width: '100%' }} />
+    <img src={wave} alt="" style={{ width: '100%' }} className="footer-wave" />
     <div className="footer py-5">
       <div className="container">
         <div className="row">
@@ -29,7 +28,8 @@ const Footer = ({ contrib }) => (
               <a
                 href="https://github.com/zero-to-mastery"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <i className="grow fab fa-github-square" />
               </a>
             </div>
@@ -40,7 +40,9 @@ const Footer = ({ contrib }) => (
             <ul>
               <a
                 href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"
-                target="_blank" rel="noopener noreferrer">
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <li className="grow">Zero To Mastery</li>
               </a>
               <a href="https://github.com/anantankur" target="_blank" rel="noopener noreferrer">
