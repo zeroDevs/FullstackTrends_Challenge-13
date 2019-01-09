@@ -54,14 +54,16 @@ const Footer = ({ contrib }) => (
               <a href="https://github.com/MattCSmith" target="_blank" rel="noopener noreferrer">
                 <li>Matt Smith</li>
               </a>
-              <Contrib contributors={contrib}/>
+              <Contrib contributors={contrib} />
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div className="copyright">© {new Date().getFullYear()} FullStack Trends. All Rights Reserved</div>
+    <div className="copyright">
+      © {new Date().getFullYear()} FullStack Trends. All Rights Reserved
+    </div>
   </footer>
 );
 
