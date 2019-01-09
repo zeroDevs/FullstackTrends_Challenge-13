@@ -7,7 +7,7 @@ const Contrib = ({ contributors }) => {
     <div className="cFooterlink" data-toggle="modal" data-target="#contribModal">
       <li>& {contributors.length} Contributors</li>
     </div>
-
+    
     <div
       className="modal fade"
       id="contribModal"
@@ -60,15 +60,12 @@ const Contrib = ({ contributors }) => {
             <button type="button" className="button-primary" data-dismiss="modal">
               Close
             </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
   );
-}
-  
-
+};
      
 export default Contrib;

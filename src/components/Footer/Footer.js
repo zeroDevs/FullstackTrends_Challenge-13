@@ -3,6 +3,7 @@ import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo1alt.png';
 import Contrib from './contributors.js';
+import 'tachyons';
 
 const Footer = ({ contrib }) => (
   <footer>
@@ -20,17 +21,16 @@ const Footer = ({ contrib }) => (
             </p>
             <div className="socials text-white pt-2">
               <a href="https://medium.com/zerotomastery" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-medium" />
+                <i className="grow fab fa-medium" />
               </a>
               <a href="https://twitter.com/AndreiNeagoie" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter-square" />
+                <i className="grow fab fa-twitter-square" />
               </a>
               <a
                 href="https://github.com/zero-to-mastery"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-github-square" />
+                rel="noopener noreferrer">
+                <i className="grow fab fa-github-square" />
               </a>
             </div>
           </div>
@@ -40,19 +40,17 @@ const Footer = ({ contrib }) => (
             <ul>
               <a
                 href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <li>Zero To Mastery</li>
+                target="_blank" rel="noopener noreferrer">
+                <li className="grow">Zero To Mastery</li>
               </a>
               <a href="https://github.com/anantankur" target="_blank" rel="noopener noreferrer">
-                <li>Ankur Anant</li>
+                <li className="grow">Ankur Anant</li>
               </a>
               <a href="https://github.com/Dhaval1403" target="_blank" rel="noopener noreferrer">
-                <li>Dhaval Mehta</li>
+                <li className="grow">Dhaval Mehta</li>
               </a>
               <a href="https://github.com/MattCSmith" target="_blank" rel="noopener noreferrer">
-                <li>Matt Smith</li>
+                <li className="grow">Matt Smith</li>
               </a>
               <Contrib contributors={contrib} />
             </ul>
