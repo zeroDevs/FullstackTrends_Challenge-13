@@ -40,19 +40,17 @@ const Footer = ({ contrib }) => (
             <ul>
               <a
                 href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <li>Zero To Mastery</li>
+                target="_blank" rel="noopener noreferrer">
+                <li className="grow">Zero To Mastery</li>
               </a>
               <a href="https://github.com/anantankur" target="_blank" rel="noopener noreferrer">
-                <li>Ankur Anant</li>
+                <li className="grow">Ankur Anant</li>
               </a>
               <a href="https://github.com/Dhaval1403" target="_blank" rel="noopener noreferrer">
-                <li>Dhaval Mehta</li>
+                <li className="grow">Dhaval Mehta</li>
               </a>
               <a href="https://github.com/MattCSmith" target="_blank" rel="noopener noreferrer">
-                <li>Matt Smith</li>
+                <li className="grow">Matt Smith</li>
               </a>
               <Contrib contributors={contrib}/>
             </ul>
