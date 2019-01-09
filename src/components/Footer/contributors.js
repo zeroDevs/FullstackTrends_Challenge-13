@@ -1,8 +1,9 @@
 import React from 'react';
 import './contributors.css';
 
-const Contrib = ({ contributors }) => (
-  <div>
+const Contrib = ({ contributors }) => {
+  return (
+    <div>
     <div className="cFooterlink" data-toggle="modal" data-target="#contribModal">
       <li>& {contributors.length} Contributors</li>
     </div>
@@ -27,8 +28,7 @@ const Contrib = ({ contributors }) => (
           </div>
           <div className="modal-body row">
             {contributors.map(user => {
-
-                                const prevContributions = {
+              const prevContributions = {
                 MattCSmith: 74,
                 aneagoie: 30,
                 Dhaval1403: 19,
@@ -55,6 +55,7 @@ const Contrib = ({ contributors }) => (
               );
             })}
           </div>
+
           <div className="modal-footer">
             <button type="button" className="button-primary" data-dismiss="modal">
               Close
@@ -64,6 +65,10 @@ const Contrib = ({ contributors }) => (
       </div>
     </div>
   </div>
-);
 
+  );
+}
+  
+
+     
 export default Contrib;
