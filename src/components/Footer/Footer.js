@@ -15,7 +15,7 @@ const Footer = ({ contrib }) => (
               <img src={logo} alt="logo" height="50" />
             </a>
             <p className="text-muted text-left">
-              Dedicated to monitoring the top 5 job demands in the 5 categories: Web, Mobile,
+              Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile,
               Programming Languages, Backend
             </p>
             <div className="socials text-white pt-2">
