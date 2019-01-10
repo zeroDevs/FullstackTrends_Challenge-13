@@ -66,7 +66,7 @@ class App extends Component {
     }
 
     getData(currentSelection) {
-        const {langArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.rawData;
+        const { langArray, gJobArray, usJobArray, supJobArray, remJobArray } = this.state.rawData;
         const cIndex = langArray.indexOf(currentSelection);
 
         this.setState({
@@ -99,17 +99,17 @@ class App extends Component {
         this.setState({
             rawData: dataExtractor(index)
         },
-        ()=>{
-            this.getData(this.state.rawData.langArray[0]);
-        })
+            () => {
+                this.getData(this.state.rawData.langArray[0]);
+            })
     }
 
     render() {
-        const {cData, rawData, currentTopic, contributors} = this.state;
+        const { cData, rawData, currentTopic, contributors } = this.state;
         return (
             <div id="top">
                 <Header />
-                <Navigation onNavClick={this.onNavClick} currentCategoryIndex={currentCatIndexGlobal}/>
+                <Navigation onNavClick={this.onNavClick} currentCategoryIndex={currentCatIndexGlobal} />
                 <section className="trends">
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
@@ -120,7 +120,7 @@ class App extends Component {
                 </section>
                 <Newsletter />
                 <Data chartData={cData} location={false} />
-                <Footer contrib={contributors}/>
+                <Footer contrib={contributors} />
             </div>
         );
     }
