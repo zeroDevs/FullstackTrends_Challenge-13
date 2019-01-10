@@ -13,33 +13,23 @@ import chartData from './data.json';
 let currentCatIndexGlobal = 0;
 
 const dataExtractor = (catIndex) => {
-
-    let lArray = [];
-    let dlArray = [];
-    let gArray = [];
-    let usArray = [];
-    let supArray = [];
-    let remArray = [];
-
-    for (let i = 0; i < chartData[catIndex].length; i++) {
-        lArray.push(chartData[catIndex][i].name);
-        dlArray.push(chartData[catIndex][i].devLove);
-        gArray.push(chartData[catIndex][i].gJobDemand);
-        usArray.push(chartData[catIndex][i].usJobDemand);
-        supArray.push(chartData[catIndex][i].supJobDemand);
-        remArray.push(chartData[catIndex][i].remJobDemand);
-
-    }
-
-    return ({
-        langArray: lArray,
-        devLoveArray: dlArray,
-        gJobArray: gArray,
-        usJobArray: usArray,
-        supJobArray: supArray,
-        remJobArray: remArray,
-    })
-}
+    return chartData[catIndex].reduce((data, technology) => {
+        data.langArray.push(technology.name);
+        data.devLoveArray.push(technology.devLove);
+        data.gJobArray.push(technology.gJobDemand);
+        data.usJobArray.push(technology.usJobDemand);
+        data.supJobArray.push(technology.supJobDemand);
+        data.remJobArray.push(technology.remJobDemand);
+        return data;
+    }, {
+        langArray: [],
+        devLoveArray: [],
+        gJobArray: [],
+        usJobArray: [],
+        supJobArray: [],
+        remJobArray: []
+    });
+};
 
 class App extends Component {
     constructor() {
