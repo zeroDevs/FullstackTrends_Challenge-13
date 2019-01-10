@@ -46,6 +46,7 @@ const SourceChart = () => (
           bodyFontColor: '#000',
           bodyFontSize: 14,
           displayColors: false,
+          padding: 5,
         },
       }}
     />
