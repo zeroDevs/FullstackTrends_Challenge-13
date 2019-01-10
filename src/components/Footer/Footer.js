@@ -14,7 +14,7 @@ const Footer = ({ contrib }) => (
             <a className="navbar-brand pb-3" href="/#">
               <img src={logo} alt="logo" height="50" />
             </a>
-            <p className="text-muted text-justify">
+            <p className="text-muted text-left">
               Dedicated to monitoring the top 5 job demands in the 5 categories: Web, Mobile,
               Programming Languages, Backend
             </p>
