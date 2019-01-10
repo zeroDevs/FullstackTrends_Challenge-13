@@ -34,6 +34,12 @@ const Chart = ({ data, legend }) => (
               },
             },
           },
+          backgroundColor: 'rgba(0,0,0,0.7)',
+          titleFontSize: 12,
+          titleFontColor: '#fff',
+          bodyFontColor: '#fff',
+          bodyFontSize: 12,
+          displayColors: true,
         }}
       />
     )}
