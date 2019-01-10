@@ -144,11 +144,18 @@ div > span {
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
     display:none;
     border: 1px solid var(--three);
-    text-transform: uppercase
+    text-transform: uppercase;
+    animation: pop 0.2s;
+}
+
+@keyframes pop{
+  0%{transform:translate(-50%, -100%) scale(0);}
+  100%{transform:translate(-50%, -100%) scale(1);}
 }
 
 .tooltip1:hover .top {
     display:block;
+    transform:translate(-50%, -100%) scale(1);
 }
 
 .tooltip1 .top i {
