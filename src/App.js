@@ -7,6 +7,7 @@ import Rank from './components/Rank/Rank';
 import Newsletter from './components/Newsletter/Newsletter';
 import Data from './components/Data/Data';
 import Footer from './components/Footer/Footer';
+import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
 import Heart from './images/svg-bgs/heart.svg';
 
@@ -117,7 +118,10 @@ class App extends Component {
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
                         <Rank langArray={rawData.langArray} onTopicClick={this.onTopicClick} checkbox={currentTopic} />
-                        <h5 className="mb-4">{this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20)}</h5>
+                        <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys, etc..'>
+                            <h5 className="mb-4">Developer Love:</h5>
+                            <h5 className="mb-4">{this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20)}</h5>
+                        </Tooltip>
                         <Chart data={cData} />
                     </div>
                 </section>
