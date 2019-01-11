@@ -8,6 +8,7 @@ import Newsletter from './components/Newsletter/Newsletter';
 import Data from './components/Data/Data';
 import Footer from './components/Footer/Footer';
 import chartData from './data.json';
+import Heart from './images/svg-bgs/heart.svg';
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
@@ -93,6 +94,18 @@ class App extends Component {
                 this.getData(this.state.rawData.langArray[0]);
             })
     }
+    returnLove = (redHearts) => {
+        let maxHearts = 5;
+        const hearts = [];
+        while(redHearts--)
+        {
+            hearts.push(<img src={Heart} alt="active love" height="30" />);
+            maxHearts--;
+        }
+        while(maxHearts--)
+            hearts.push(<img src={Heart} alt="inactive love" height="30" style={{filter: "grayscale(1)"}} />)
+        return hearts;
+    }
 
     render() {
         const { cData, rawData, currentTopic, contributors } = this.state;
@@ -104,7 +117,7 @@ class App extends Component {
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
                         <Rank langArray={rawData.langArray} onTopicClick={this.onTopicClick} checkbox={currentTopic} />
-                        <h5 className="mb-4">Love by Community: {rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20} / 5</h5>
+                        <h5 className="mb-4">{this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20)}</h5>
                         <Chart data={cData} />
                     </div>
                 </section>
