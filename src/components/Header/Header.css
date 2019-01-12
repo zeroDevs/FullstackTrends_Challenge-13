@@ -16,8 +16,9 @@
     color: #fff
 }
 
-.logo-active{
+.logo-active {
     transition: height 0.3s;
+    cursor: pointer;
 }
 
 .scroll {
@@ -25,18 +26,17 @@
     height: 65px
 }
 
-.smLogo > a > img {
+.smLogo>a>img {
     height: 40px;
     position: relative;
     transition: 0.3s;
 }
 
-.scroll > .nav-buttons {
+.scroll>.nav-buttons {
     position: relative;
 }
 
-
-  @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     #header {
         background: #fff
     }
