@@ -3,9 +3,16 @@
     padding: 15px;
 }
 
+.button-primary {
+    transition: all 0.4s;
+}
+
+#header {
+    transition: all 0.4s;
+}
+
 #header a {
     color: var(--three);
-    margin-bottom: 7px;
 }
 
 #header .active {
@@ -36,7 +43,7 @@
     position: relative;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 991px) {
     #header {
         background: #fff
     }

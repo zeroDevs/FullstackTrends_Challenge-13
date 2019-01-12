@@ -48,7 +48,7 @@ const Chart = ({ data }) => {
             titleFontColor: '#fff',
             bodyFontColor: '#fff',
             bodyFontSize: 12,
-            displayColors: true,
+            displayColors: true
           }}
         />
       )}
