@@ -8,6 +8,18 @@
     --five: #2B2A2A;
 }
 
+/* Media queries */
+
+@media only screen and (max-width: 360px) {
+    .trends { 
+        padding: 10px;
+    }
+    
+    .ranked-langs {
+        padding-bottom: 1rem important;
+    }
+}
+
 /* Fonts and Imports */
 
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo+2|Raleway|Ubuntu');
@@ -38,11 +50,6 @@ body::-webkit-scrollbar-thumb {
     background: #fff
 }
 
-@media only screen and (max-width: 360px) {
-    .trends { 
-        padding: 10px;
-    }
-}
 .title {
     font-family: 'Raleway', sans-serif;
     margin-bottom: 25px;
