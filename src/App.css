@@ -38,6 +38,11 @@ body::-webkit-scrollbar-thumb {
     background: #fff
 }
 
+@media only screen and (max-width: 360px) {
+    .trends { 
+        padding: 10px;
+    }
+}
 .title {
     font-family: 'Raleway', sans-serif;
     margin-bottom: 25px;
