@@ -45,6 +45,9 @@
 
 @media only screen and (max-width: 991px) {
     #header {
-        background: #fff
+        background: #fff;
+    }
+    .button-primary:first-child {
+        margin-bottom: 7px;
     }
 }
