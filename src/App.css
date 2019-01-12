@@ -47,7 +47,9 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid var(--one);
 }
 .collapse.show {
-    background: #fff
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 17px;
+    border-radius: 0px 0px 8px 8px;
 }
 
 .title {
@@ -56,6 +58,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .button-primary {
+    text-align: center;
     color: var(--one);
     padding: 8px 30px;
     border-radius: 15px;
