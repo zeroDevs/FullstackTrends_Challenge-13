@@ -24,7 +24,7 @@ const Rank = ({ langArray, onTopicClick, checkbox }) => {
     );
   }
 
-  return <div className="pb-5 ranked-langs">{langArray.map(addLang)}</div>;
+  return <div className="ranked-langs">{langArray.map(addLang)}</div>;
 };
 
 export default Rank;

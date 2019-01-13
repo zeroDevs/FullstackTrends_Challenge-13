@@ -1,7 +1,3 @@
-.tooltipTextContainer {
-    position: absolute;
-}
-
 .tooltipTrigger:hover .tooltipTextContainer {
     display: flex !important;
     flex-direction: column;
@@ -10,6 +6,7 @@
 }
 
 .tooltipTextContainer {
+    position: absolute;
     width: 25%;
     min-width: 300px;
 }
@@ -33,7 +30,7 @@
 .arrow-bottom {
     border-width: 0 10px 10px 10px;
     border-color: transparent;
-    border-bottom-color: rgba(0,0,0,.85);
+    border-bottom-color: rgba(0, 0, 0, .85);
     border-style: solid;
 }
 
@@ -41,7 +38,6 @@
     .tooltipTrigger {
         flex-direction: row;
     }
-
     .tooltipTrigger.bottom .tooltipTextContainer {
         top: 50px;
         left: auto;
