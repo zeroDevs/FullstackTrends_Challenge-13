@@ -106,6 +106,12 @@
   .trends {
     width: 96vw;  
   }
+  .trends p {
+    margin-bottom: 1.5rem;
+  }
+  .title {
+    font-size: 1.7rem;
+  }
   .container-grid {
     width: auto;
     grid-gap: 1px;
