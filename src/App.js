@@ -13,6 +13,7 @@ import Heart from './images/svg-bgs/heart.svg';
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
+let loveHearts = [];
 
 const dataExtractor = (catIndex) => {
     return chartData[catIndex].reduce((data, technology) => {
@@ -36,12 +37,17 @@ const dataExtractor = (catIndex) => {
 class App extends Component {
     constructor() {
         super();
+        const currentTopic = chartData[currentCatIndexGlobal][0].name;
+        const rawData = dataExtractor(currentCatIndexGlobal);
+
         this.state = {
             cData: {},
-            currentTopic: chartData[currentCatIndexGlobal][0].name,
-            rawData: dataExtractor(currentCatIndexGlobal),
+            currentTopic: currentTopic,
+            rawData: rawData,
             contributors: []
         }
+
+        this.setLoveHearts(currentTopic, rawData);
     }
 
     fetchContributors = async () => {
@@ -80,6 +86,8 @@ class App extends Component {
                 labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']
             }
         });
+
+        this.setLoveHearts(currentSelection, this.state.rawData);
     }
 
     onTopicClick = (topic) => {
@@ -108,6 +116,10 @@ class App extends Component {
         return hearts;
     }
 
+    setLoveHearts = (currentTopic, rawData) => {
+      loveHearts = this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20);
+    }
+
     render() {
         const { cData, rawData, currentTopic, contributors } = this.state;
         return (
@@ -120,7 +132,7 @@ class App extends Component {
                         <Rank langArray={rawData.langArray} onTopicClick={this.onTopicClick} checkbox={currentTopic} />
                         <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys, etc..'>
                             <h5 className="mb-4">Developer Love:</h5>
-                            <h5 className="mb-4">{this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20)}</h5>
+                            <h5 className="mb-4">{loveHearts}</h5>
                         </Tooltip>
                         <Chart data={cData} />
                     </div>
