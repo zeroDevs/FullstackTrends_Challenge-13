@@ -66,14 +66,20 @@
     margin-bottom: 1rem !important;
 }
 
+@media only screen and (max-width: 620px){
+  .zone > img {
+    width: 80.500%;
+  }
+}
+
 @media only screen and (min-width: 620px) and (max-width: 760px){
     .zone > img {
-      width: 80.500%;
+      width: 75.500%;
   }
 }
 @media only screen and (min-width: 760px) and (max-width: 1110px){
   .zone > img {
-    width: 60.500%;
+    width: 50.500%;
 }
 }
 @media only screen and (min-width: 1110px){
