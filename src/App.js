@@ -108,11 +108,11 @@ class App extends Component {
         const hearts = [];
         while(redHearts--)
         {
-            hearts.push(<img src={Heart} alt="active love" height="30" />);
+            hearts.push(<img src={Heart} alt="active love" height="25" />);
             maxHearts--;
         }
         while(maxHearts--)
-            hearts.push(<img src={Heart} alt="inactive love" height="30" style={{filter: "grayscale(1)"}} />)
+            hearts.push(<img src={Heart} alt="inactive love" height="25" style={{filter: "grayscale(1)"}} />)
         return hearts;
     }
 
@@ -131,8 +131,8 @@ class App extends Component {
                     <div className="chart-container">
                         <Rank langArray={rawData.langArray} onTopicClick={this.onTopicClick} checkbox={currentTopic} />
                         <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys, etc..'>
-                            <h5 className="mb-4">Developer Love:</h5>
-                            <h5 className="mb-4">{loveHearts}</h5>
+                            <h5 className="pr-1">Developer Love:</h5>
+                            <h5 className="pl-1">{loveHearts}</h5>
                         </Tooltip>
                         <Chart data={cData} />
                     </div>
