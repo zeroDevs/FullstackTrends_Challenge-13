@@ -41,7 +41,7 @@
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    max-width: 100px;
+    max-width: 100%;
     height: auto;
     padding: 5%;
     margin-left: auto;
@@ -72,7 +72,11 @@
     width: 60.500%;
 }
 }
-
+@media only screen and (min-width: 1110px){
+  .zone > img {
+    width: 60.500%;
+}
+}
 @media only screen and (max-width: 1110px) {
   .arrow {
     display: none;
