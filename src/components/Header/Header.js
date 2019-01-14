@@ -18,7 +18,9 @@ const Header = () => (
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon" />
+        <div className="toggle-button-line"></div>
+		    <div className="toggle-button-line"></div>
+        <div className="toggle-button-line"></div>
       </button>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav nav-buttons">
