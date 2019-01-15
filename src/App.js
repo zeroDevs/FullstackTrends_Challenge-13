@@ -121,7 +121,7 @@ class App extends Component {
     }
 
     render() {
-        const { cData, rawData, currentTopic, contributors } = this.state;
+        const { cData, rawData, currentTopic, contributors} = this.state;
         return (
             <div id="top">
                 <Header />
@@ -138,7 +138,7 @@ class App extends Component {
                     </div>
                 </section>
                 <Newsletter />
-                <Data chartData={cData} location={false} />
+                <Data loveFunction={this.returnLove} />
                 <Footer contrib={contributors} />
             </div>
         );

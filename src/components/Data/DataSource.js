@@ -18,7 +18,7 @@ const sources = [
   'stateofjs',
 ];
 
-const DataSource = ({ chartData }) => (
+const DataSource = ({ loveFunction }) => (
   <div className="wrapper-data">
     <div className="container-grid">
       {sources.map((c, i) => (
@@ -45,7 +45,7 @@ const DataSource = ({ chartData }) => (
       <span>&#8675;</span>
     </div>
     <div className="source-chart">
-      <SourceChart data={chartData} demo />
+      <SourceChart loveFunction={loveFunction} demo />
     </div>
   </div>
 );

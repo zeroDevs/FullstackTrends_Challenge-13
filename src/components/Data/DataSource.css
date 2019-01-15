@@ -11,15 +11,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 }
 
 .zone {
-    position:relative;
+    position: relative;
     text-align: center;
-    font-size:10em;
-    border-radius:4px;
-    border:1px solid #bbb;
+    font-size: 10em;
+    border-radius: 4px;
+    border: 1px solid #bbb;
     background: #A88BEB;
     box-sizing: border-box;
     /* Old browsers */
@@ -36,11 +36,11 @@
     background: linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
 }
 
-.zone > img {
+.zone>img {
     position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 100%;
     height: auto;
     padding: 5%;
@@ -62,91 +62,99 @@
     margin-top: 40px;
 }
 
-.mb-4, my-4 {
+.mb-4,
+my-4 {
     margin-bottom: 1rem !important;
 }
 
-@media only screen and (max-width: 620px){
-  .zone > img {
-    width: 80.500%;
-  }
+@media only screen and (max-width: 620px) {
+    .zone>img {
+        width: 80.500%;
+    }
 }
 
-@media only screen and (min-width: 620px) and (max-width: 760px){
-    .zone > img {
-      width: 75.500%;
-  }
+@media only screen and (min-width: 620px) and (max-width: 760px) {
+    .zone>img {
+        width: 75.500%;
+    }
 }
-@media only screen and (min-width: 760px) and (max-width: 1110px){
-  .zone > img {
-    width: 50.500%;
+
+@media only screen and (min-width: 760px) and (max-width: 1110px) {
+    .zone>img {
+        width: 50.500%;
+    }
 }
+
+@media only screen and (min-width: 1110px) {
+    .zone>img {
+        width: 60.500%;
+    }
 }
-@media only screen and (min-width: 1110px){
-  .zone > img {
-    width: 60.500%;
-}
-}
+
 @media only screen and (max-width: 1110px) {
-  .arrow {
-    display: none;
-  }
-  .arrow2 {
-    display: flex;
-  }
-  .wrapper-data {
-    flex-direction: column;
-  }
-  .container-grid {
-    width: 100%;
-  }
-  .source-chart {
-    margin-top: 0;
-  }
+    .arrow {
+        display: none;
+    }
+    .arrow2 {
+        display: flex;
+    }
+    .wrapper-data {
+        flex-direction: column;
+    }
+    .container-grid {
+        width: 100%;
+    }
+    .source-chart {
+        margin-top: 0;
+    }
 }
 
 /* IPhone 5/SE */
-@media only screen and (max-width: 320px), (max-height: 320px) {
-  .arrow2 {
-    display: none;
-  }
-  .container-grid .tooltip1:hover .top {
-    display: none;
-  }
-  .trends {
-    width: 96vw;  
-  }
-  .trends p {
-    margin-bottom: 1.5rem;
-  }
-  .title {
-    font-size: 1.7rem;
-  }
-  .container-grid {
-    width: auto;
-    grid-gap: 1px;
-    grid-template-columns: repeat(4, 70px);
-  }
-  .source-chart {
-    width: auto;
-  }
-  .more {
-    font-size: 3.8rem;
-    color: #fff;
-  }
-  .mb-4 {
-    margin: 1rem;
-  }
-} 
+
+@media only screen and (max-width: 320px),
+(max-height: 320px) {
+    .arrow2 {
+        display: none;
+    }
+    .container-grid .tooltip1:hover .top {
+        display: none;
+    }
+    .trends {
+        width: 96vw;
+    }
+    .trends p {
+        margin-bottom: 1.5rem;
+    }
+    .title {
+        font-size: 1.7rem;
+    }
+    .container-grid {
+        width: auto;
+        grid-gap: 1px;
+        grid-template-columns: repeat(4, 70px);
+    }
+    .source-chart {
+        width: auto;
+    }
+    .more {
+        font-size: 3.8rem;
+        color: #fff;
+    }
+    .mb-4 {
+        margin: 1rem;
+    }
+}
 
 /* Other devices */
-@media only screen and (max-width: 414px), (max-height: 414px) {
-  .arrow2 {
-    display: none;
-  }
-  .mb-4 {
-    margin: 1rem;
-  }
+
+@media only screen and (max-width: 414px),
+(max-height: 414px) {
+    .arrow2 {
+        display: none;
+    }
+    .mb-4 {
+        margin: 1rem;
+    }
 }
 
 div>span {
@@ -181,14 +189,18 @@ div>span {
     animation: pop 0.2s;
 }
 
-@keyframes pop{
-  0%{transform:translate(-50%, -100%) scale(0);}
-  100%{transform:translate(-50%, -100%) scale(1);}
+@keyframes pop {
+    0% {
+        transform: translate(-50%, -100%) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -100%) scale(1);
+    }
 }
 
 .tooltip1:hover .top {
-    display:block;
-    transform:translate(-50%, -100%) scale(1);
+    display: block;
+    transform: translate(-50%, -100%) scale(1);
 }
 
 .tooltip1 .top i {

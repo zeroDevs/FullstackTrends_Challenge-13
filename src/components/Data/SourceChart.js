@@ -18,16 +18,18 @@ const data = {
   labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand'],
 };
 
-const SourceChart = () => (
+const SourceChart = ({loveFunction}) => {
+  const hearts = loveFunction(4);
+  return(
   <div>
-    <h5 className="mb-4">Love by Community: 4 / 5</h5>
+    <h5 className="mb-4">Developer Love: {hearts}</h5>
     <Polar
       data={data}
       height={300}
       width={300}
       options={{
         maintainAspectRatio: true,
-        responsive: true,
+        responsive: false,
         legend: {
           position: true,
         },
@@ -37,7 +39,7 @@ const SourceChart = () => (
               return data.labels[tooltipItem[0].index];
             },
             label(tooltipItem, data) {
-              return data.datasets[0].data[tooltipItem.index];
+              return ` ${data.datasets[0].data[tooltipItem.index]} %`;
             },
           },
           backgroundColor: 'rgba(0,0,0,0.7)',
@@ -45,12 +47,12 @@ const SourceChart = () => (
           titleFontColor: '#fff',
           bodyFontColor: '#fff',
           bodyFontSize: 12,
-          displayColors: false,
+          displayColors: true,
           padding: 5,
         },
       }}
     />
-  </div>
-);
+  </div>);
+}
 
 export default SourceChart;
