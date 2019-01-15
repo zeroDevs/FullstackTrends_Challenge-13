@@ -2,7 +2,13 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Chart from '../components/Chart/Chart';
 
-
+window.matchMedia = jest.fn().mockImplementation(query => ({
+  matches: false,
+  media: query,
+  onchange: null,
+  addListener: jest.fn(),
+  removeListener: jest.fn(),
+}));
 
 describe('Chart', () => {
   let props;
