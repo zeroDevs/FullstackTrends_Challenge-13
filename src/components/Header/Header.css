@@ -7,6 +7,29 @@
     transition: all 0.4s;
 }
 
+.navbar-toggler {
+    transition: all 0.4s;
+}
+
+.navbar-toggler:focus {
+    outline:0;
+}
+
+.navbar-toggler:hover {
+    background-color: var(--three);
+}
+
+.navbar-toggler:hover .toggle-button-line {
+    background: #fff;
+}
+
+.toggle-button-line {
+	width: 30px;
+    height: 1.5px;
+    margin: 5px;
+	background: grey;
+}
+
 #header {
     transition: all 0.4s;
 }
