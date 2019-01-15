@@ -138,7 +138,7 @@ class App extends Component {
                     </div>
                 </section>
                 <Newsletter />
-                <Data chartData={cData} location={false} />
+                <Data loveFunction={this.returnLove} />
                 <Footer contrib={contributors} />
             </div>
         );
