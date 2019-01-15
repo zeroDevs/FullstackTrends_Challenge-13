@@ -22,7 +22,7 @@ const SourceChart = ({loveFunction}) => {
   const hearts = loveFunction(4);
   return(
   <div>
-    <h5 className="mb-4">Developer Love: {hearts}</h5>
+    <h5 className="mb-4">`Developer Love: ${hearts}`</h5>
     <Polar
       data={data}
       height={300}
