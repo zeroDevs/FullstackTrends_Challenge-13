@@ -121,7 +121,7 @@ class App extends Component {
     }
 
     render() {
-        const { cData, rawData, currentTopic, contributors} = this.state;
+        const { cData, rawData, currentTopic, contributors } = this.state;
         return (
             <div id="top">
                 <Header />
