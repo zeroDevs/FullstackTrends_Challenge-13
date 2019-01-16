@@ -1,6 +1,5 @@
 [
-    [
-        {
+    [{
             "name": "React",
             "devLove": 100,
             "gJobDemand": 39.43,
@@ -47,8 +46,7 @@
         }
     ],
 
-    [
-        {
+    [{
             "name": "Android (Java, Kotlin)",
             "devLove": 60,
             "gJobDemand": 29.48,
@@ -95,8 +93,7 @@
         }
     ],
 
-    [
-        {
+    [{
             "name": "JavaScript",
             "devLove": 80,
             "gJobDemand": 27.88,
@@ -143,8 +140,7 @@
         }
     ],
 
-    [
-        {
+    [{
             "name": "Node.js",
             "devLove": 100,
             "gJobDemand": 21.76,
@@ -172,7 +168,7 @@
 
         },
         {
-            "name": "PosrgreSQL",
+            "name": "PostgreSQL",
             "devLove": 100,
             "gJobDemand": 12.27,
             "usJobDemand": 8.27,
