@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
 import Heart from './images/svg-bgs/heart.svg';
+import uniqueid from 'uniqid';
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
@@ -108,11 +109,11 @@ class App extends Component {
         const hearts = [];
         while(redHearts--)
         {
-            hearts.push(<img src={Heart} alt="active love" height="25" />);
+            hearts.push(<img src={Heart} alt="active love" height="25" key={uniqueid()} />);
             maxHearts--;
         }
         while(maxHearts--)
-            hearts.push(<img src={Heart} alt="inactive love" height="25" style={{filter: "grayscale(1)"}} />)
+            hearts.push(<img src={Heart} alt="inactive love" height="25" key={uniqueid()} style={{filter: "grayscale(1)"}} />)
         return hearts;
     }
 
