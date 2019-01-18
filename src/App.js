@@ -10,7 +10,6 @@ import Footer from './components/Footer/Footer';
 import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
 import Heart from './images/svg-bgs/heart.svg';
-import uniqueid from 'uniqid';
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
@@ -47,8 +46,14 @@ class App extends Component {
             rawData: rawData,
             contributors: []
         }
+        this.keyCount = 0;
 
+        this.getKey = this.getKey.bind(this);
         this.setLoveHearts(currentTopic, rawData);
+    }
+
+    getKey(){
+        return this.keyCount++;
     }
 
     fetchContributors = async () => {
@@ -109,11 +114,11 @@ class App extends Component {
         const hearts = [];
         while(redHearts--)
         {
-            hearts.push(<img src={Heart} alt="active love" height="25" key={uniqueid()} />);
+            hearts.push(<img src={Heart} alt="active love" height="25" key={this.getKey()} />);
             maxHearts--;
         }
         while(maxHearts--)
-            hearts.push(<img src={Heart} alt="inactive love" height="25" key={uniqueid()} style={{filter: "grayscale(1)"}} />)
+            hearts.push(<img src={Heart} alt="inactive love" height="25" key={this.getKey()} style={{filter: "grayscale(1)"}} />)
         return hearts;
     }
 
