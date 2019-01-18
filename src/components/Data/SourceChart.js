@@ -24,7 +24,7 @@ const SourceChart = ({ loveFunction }) => {
   return (
     <div>
       <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys, etc..'>
-        <h5 className="pr-1 anim-waving">Developer Love:</h5>
+        <h5 className="pr-1">Developer Love:</h5>
         <h5 className="pl-1 anim-waving">{hearts}</h5>
       </Tooltip>
       <Polar
