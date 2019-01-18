@@ -1,5 +1,6 @@
 import React from 'react';
 import { Polar } from 'react-chartjs-2';
+import Tooltip from '../Tooltip/Tooltip'
 
 const data = {
   datasets: [
@@ -22,7 +23,10 @@ const SourceChart = ({ loveFunction }) => {
   const hearts = loveFunction(4);
   return (
     <div>
-      <h5 className="mb-4 anim-waving">Developer Love: { hearts }</h5>
+      <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys, etc..'>
+        <h5 className="pr-1">Developer Love:</h5>
+        <h5 className="pl-1 anim-waving">{hearts}</h5>
+      </Tooltip>
       <Polar
         data={ data }
         height={ 300 }
