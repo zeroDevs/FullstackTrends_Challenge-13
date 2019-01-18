@@ -129,7 +129,7 @@ class App extends Component {
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
                         <Rank langArray={ rawData.langArray } onTopicClick={ this.onTopicClick } checkbox={ currentTopic } />
-                        <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys, etc..'>
+                        <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, Google searches, and satisfaction surveys, etc..'>
                             <h5 className="pr-1">Developer Love:</h5>
                             <h5 className="pl-1 anim-waving ">{ loveHearts }</h5>
                         </Tooltip>
