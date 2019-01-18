@@ -25,13 +25,13 @@ const dataExtractor = (catIndex) => {
         data.remJobArray.push(technology.remJobDemand);
         return data;
     }, {
-        langArray: [],
-        devLoveArray: [],
-        gJobArray: [],
-        usJobArray: [],
-        supJobArray: [],
-        remJobArray: []
-    });
+            langArray: [],
+            devLoveArray: [],
+            gJobArray: [],
+            usJobArray: [],
+            supJobArray: [],
+            remJobArray: []
+        });
 };
 
 class App extends Component {
@@ -106,18 +106,17 @@ class App extends Component {
     returnLove = (redHearts) => {
         let maxHearts = 5;
         const hearts = [];
-        while(redHearts--)
-        {
-            hearts.push(<img src={Heart} alt="active love" height="25" />);
+        while (redHearts--) {
+            hearts.push(<img src={ Heart } alt="active love" height="25" />);
             maxHearts--;
         }
-        while(maxHearts--)
-            hearts.push(<img src={Heart} alt="inactive love" height="25" style={{filter: "grayscale(1)"}} />)
+        while (maxHearts--)
+            hearts.push(<img src={ Heart } alt="inactive love" height="25" style={ { filter: "grayscale(1)" } } />)
         return hearts;
     }
 
     setLoveHearts = (currentTopic, rawData) => {
-      loveHearts = this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20);
+        loveHearts = this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20);
     }
 
     render() {
@@ -125,21 +124,21 @@ class App extends Component {
         return (
             <div id="top">
                 <Header />
-                <Navigation onNavClick={this.onNavClick} currentCategoryIndex={currentCatIndexGlobal} />
+                <Navigation onNavClick={ this.onNavClick } currentCategoryIndex={ currentCatIndexGlobal } />
                 <section className="trends">
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
-                        <Rank langArray={rawData.langArray} onTopicClick={this.onTopicClick} checkbox={currentTopic} />
+                        <Rank langArray={ rawData.langArray } onTopicClick={ this.onTopicClick } checkbox={ currentTopic } />
                         <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys, etc..'>
                             <h5 className="pr-1">Developer Love:</h5>
-                            <h5 className="pl-1">{loveHearts}</h5>
+                            <h5 className="pl-1 anim-waving ">{ loveHearts }</h5>
                         </Tooltip>
-                        <Chart data={cData} />
+                        <Chart data={ cData } />
                     </div>
                 </section>
                 <Newsletter />
-                <Data loveFunction={this.returnLove} />
-                <Footer contrib={contributors} />
+                <Data loveFunction={ this.returnLove } />
+                <Footer contrib={ contributors } />
             </div>
         );
     }
