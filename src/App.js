@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
@@ -6,10 +6,12 @@ import Chart from './components/Chart/Chart';
 import Rank from './components/Rank/Rank';
 import Newsletter from './components/Newsletter/Newsletter';
 import Data from './components/Data/Data';
-import Footer from './components/Footer/Footer';
 import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
 import Heart from './images/svg-bgs/heart.svg';
+
+//dynamically import files
+const Footer = React.lazy(() => import('./components/Footer/Footer'));
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
@@ -138,7 +140,9 @@ class App extends Component {
                 </section>
                 <Newsletter />
                 <Data loveFunction={ this.returnLove } />
-                <Footer contrib={ contributors } />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Footer contrib={ contributors } />
+                </Suspense>
             </div>
         );
     }
