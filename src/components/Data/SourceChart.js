@@ -1,5 +1,6 @@
 import React from 'react';
 import { Polar } from 'react-chartjs-2';
+import Tooltip from '../Tooltip/Tooltip'
 
 const data = {
   datasets: [
