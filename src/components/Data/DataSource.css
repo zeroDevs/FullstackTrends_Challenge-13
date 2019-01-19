@@ -37,6 +37,11 @@
   background: linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
 }
 
+.zone:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
 .zone>img {
   position: absolute;
   top: 50%;
@@ -47,11 +52,6 @@
   padding: 5%;
   margin-left: auto;
   margin-right: auto;
-}
-
-.zone:hover {
-  transform: scale(1.2);
-  z-index: 1;
 }
 
 .more {
