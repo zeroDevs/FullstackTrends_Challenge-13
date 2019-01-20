@@ -9,6 +9,7 @@
 
 .navbar-toggler {
     transition: all 0.4s;
+    margin-left:auto;
 }
 
 .navbar-toggler:focus {
