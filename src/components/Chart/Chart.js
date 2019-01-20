@@ -29,7 +29,7 @@ const Chart = ({ data }) => {
             scale: {
               ticks: {
                 suggestedMin: 0,
-                suggestedMax: 50
+                suggestedMax: 5,
               },
             },
             legend,
@@ -48,7 +48,7 @@ const Chart = ({ data }) => {
             titleFontColor: '#fff',
             bodyFontColor: '#fff',
             bodyFontSize: 12,
-            displayColors: true
+            displayColors: true,
           }}
         />
       )}
