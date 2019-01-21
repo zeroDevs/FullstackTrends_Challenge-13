@@ -46,7 +46,8 @@ class App extends Component {
             cData: {},
             currentTopic: currentTopic,
             rawData: rawData,
-            contributors: []
+            contributors: [],
+            headerClass: "navbar navbar-expand-lg navbar-light fixed-top"
         }
 
         this.setLoveHearts(currentTopic, rawData);
@@ -62,7 +63,8 @@ class App extends Component {
 
     componentDidMount() {
         this.getData(this.state.currentTopic);
-        this.fetchContributors()
+        this.fetchContributors();
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     getData(currentSelection) {
@@ -121,11 +123,20 @@ class App extends Component {
         loveHearts = this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20);
     }
 
+    handleScroll = () => {
+        //"navbar navbar-expand-md navbar-light fixed-top"
+        if (window.scrollY <= 10 ) {
+            this.setState({headerClass: "navbar navbar-expand-lg navbar-light fixed-top"})
+        } else if (this.state.headerClass === "navbar navbar-expand-lg navbar-light fixed-top"){
+            this.setState({headerClass: "navbar navbar-expand-lg navbar-light fixed-top scroll smLogo"})
+        }
+    }
+
     render() {
         const { cData, rawData, currentTopic, contributors } = this.state;
         return (
-            <div id="top">
-                <Header />
+            <div id="top" ref={(ref) => this.scrollIcon = ref}>
+                <Header headerClass={this.state.headerClass} />
                 <Navigation onNavClick={ this.onNavClick } currentCategoryIndex={ currentCatIndexGlobal } />
                 <section className="trends">
                     <h2 className="title">Top 5</h2>

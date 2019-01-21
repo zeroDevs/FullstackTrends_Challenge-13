@@ -3,9 +3,9 @@ import { Link } from 'react-scroll';
 import './Header.css';
 import logo from '../../images/logo1.png';
 
-const Header = () => (
+const Header = ({headerClass}) => (
   <section>
-    <nav id="header" className="navbar navbar-expand-md navbar-light fixed-top">
+    <nav id="header" className={headerClass}>
       <Link to="top" smooth duration={800} offset={-131}>
         <img src={logo} alt="logo" height="50" className="logo-active" />
       </Link>
