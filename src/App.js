@@ -48,8 +48,14 @@ class App extends Component {
             rawData: rawData,
             contributors: []
         }
+        this.keyCount = 0;
 
+        this.getKey = this.getKey.bind(this);
         this.setLoveHearts(currentTopic, rawData);
+    }
+
+    getKey(){
+        return this.keyCount++;
     }
 
     fetchContributors = async () => {
@@ -108,12 +114,15 @@ class App extends Component {
     returnLove = (redHearts) => {
         let maxHearts = 5;
         const hearts = [];
-        while (redHearts--) {
-            hearts.push(<img src={ Heart } alt="active love" height="25" />);
+
+        while(redHearts--)
+        {
+            hearts.push(<img src={Heart} alt="active love" height="25" key={this.getKey()} />);
             maxHearts--;
         }
-        while (maxHearts--)
-            hearts.push(<img src={ Heart } alt="inactive love" height="25" style={ { filter: "grayscale(1)" } } />)
+        while(maxHearts--)
+            hearts.push(<img src={Heart} alt="inactive love" height="25" key={this.getKey()} style={{filter: "grayscale(1)"}} />)
+
         return hearts;
     }
 
