@@ -3,7 +3,9 @@ import './Navigation.css';
 
 const Navigation = ({ onNavClick, currentCategoryIndex }) => {
   const isActive = categoryIndex =>
-    `button-primary${categoryIndex === currentCategoryIndex ? ' active boxx' : ''}`;
+    `button-primary button--icon${
+      categoryIndex === currentCategoryIndex ? " active boxx" : ""
+    }`;
   return (
     <div className="container">
       <div className="row center text-center">

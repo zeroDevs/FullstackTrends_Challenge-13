@@ -22,6 +22,7 @@
   border: 1px solid #bbb;
   background: #A88BEB;
   box-sizing: border-box;
+  transition: transform 0.4s;
   /* Old browsers */
   background: -moz-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
   /* FF3.6+ */
@@ -34,6 +35,11 @@
   background: -ms-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
   /* IE10+ */
   background: linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+}
+
+.zone:hover {
+  transform: scale(1.2);
+  z-index: 1;
 }
 
 .zone>img {

@@ -9,6 +9,7 @@
 
 .navbar-toggler {
     transition: all 0.4s;
+    margin-left:auto;
 }
 
 .navbar-toggler:focus {
@@ -35,7 +36,7 @@
 }
 
 #header a {
-    color: var(--three);
+    color: var(--one);
 }
 
 #header .active {
