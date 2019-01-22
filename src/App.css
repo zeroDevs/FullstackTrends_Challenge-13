@@ -8,9 +8,21 @@
     --five: #2B2A2A;
 }
 
-/* Fonts and Imports */
+body {
+    font-family: 'Roboto Mono', monospace;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo+2|Raleway|Ubuntu');
+/* Media queries */
+
+@media only screen and (max-width: 360px) {
+    .trends {
+        padding: 10px;
+    }
+    .ranked-langs {
+        padding-bottom: 1rem !important;
+    }
+}
+
 body {
     background-color: rgb(255, 255, 255);
     background-image: url("./images/parallax.svg");
@@ -19,7 +31,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 body::-webkit-scrollbar {
     width: 15px;
@@ -34,8 +45,11 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--one);
     outline: 1px solid var(--one);
 }
+
 .collapse.show {
-    background: #fff
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 17px;
+    border-radius: 0px 0px 8px 8px;
 }
 
 .title {
@@ -44,6 +58,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .button-primary {
+    text-align: center;
     color: var(--one);
     padding: 8px 30px;
     border-radius: 15px;
@@ -83,7 +98,9 @@ body::-webkit-scrollbar-thumb {
 
 h2 {
     color: var(--one);
-    text-decoration: underline;
+    display: inline-flex;
+    border-bottom: 2px solid var(--one);
+    padding-bottom: 2px;
 }
 
 .svg-flip {
@@ -99,4 +116,47 @@ h2 {
     /* IE9 */
     transform: rotate(180deg);
     z-index: -1;
+}
+
+.anim-waving img {
+    animation-name: waving;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.anim-waving img:nth-child(1) {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+.anim-waving img:nth-child(2) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.anim-waving img:nth-child(3) {
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+}
+
+.anim-waving img:nth-child(4) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.anim-waving img:nth-child(5) {
+    -webkit-animation-delay: 1.25s;
+    animation-delay: 1.25s;
+}
+
+@keyframes waving {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, -0.5rem);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
 }

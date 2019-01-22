@@ -10,21 +10,21 @@ const Rank = ({ langArray, onTopicClick, checkbox }) => {
   function addLang(lang) {
     const id = Math.random();
     return (
-      <div key={lang + id} className="pretty p-default p-smooth p-bigger lang-controls">
+      <div key={ lang + id } className="pretty p-default p-smooth p-bigger lang-controls">
         <input
-          id={lang}
+          id={ lang }
           type="checkbox"
-          defaultChecked={isChecked(lang, checkbox)}
-          onChange={() => onTopicClick(lang)}
+          defaultChecked={ isChecked(lang, checkbox) }
+          onChange={ () => onTopicClick(lang) }
         />
         <div className="state p-warning">
-          <label htmlFor={lang}>{lang}</label>
+          <label htmlFor={ lang }>{ lang }</label>
         </div>
       </div>
     );
   }
 
-  return <div className="pb-5 ranked-langs">{langArray.map(addLang)}</div>;
+  return <div className="ranked-langs">{ langArray.map(addLang) }</div>;
 };
 
 export default Rank;
