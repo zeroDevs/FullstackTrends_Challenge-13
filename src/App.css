@@ -8,6 +8,10 @@
     --five: #2B2A2A;
 }
 
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
 /* Media queries */
 
 @media only screen and (max-width: 360px) {
@@ -26,7 +30,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Roboto Mono', monospace;
 }
 
 body::-webkit-scrollbar {
