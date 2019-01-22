@@ -19,9 +19,6 @@
     }
 }
 
-/* Fonts and Imports */
-
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo+2|Raleway|Ubuntu');
 body {
     background-color: rgb(255, 255, 255);
     background-image: url("./images/parallax.svg");
@@ -29,6 +26,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Roboto Mono', monospace;
 }
 
 body::-webkit-scrollbar {
