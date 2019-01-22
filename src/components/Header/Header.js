@@ -3,10 +3,9 @@ import { Link } from 'react-scroll';
 import './Header.css';
 import logo from '../../images/logo1.png';
 
-const Header = () => (
+const Header = ({headerClass}) => (
   <section>
-    <nav id="header" className="navbar navbar-expand-md navbar-light fixed-top">
-
+    <nav id="header" className={headerClass}>
       <button
         className="navbar-toggler"
         type="button"
