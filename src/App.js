@@ -76,21 +76,22 @@ class App extends Component {
     getData(currentSelection) {
         const { langArray, gJobArray, usJobArray, supJobArray, remJobArray } = this.state.rawData;
         const cIndex = langArray.indexOf(currentSelection);
-
         this.setState({
             currentTopic: currentSelection,
             cData: {
                 datasets: [
                     {
                         data: [gJobArray[cIndex], usJobArray[cIndex], supJobArray[cIndex], remJobArray[cIndex]],
-                        label: 'Languages',
-                        backgroundColor: [
-                            'rgba(255,99,132,0.7)',
-                            'rgba(75,192,192,0.7)',
-                            'rgba(255,206,86,0.7)',
-                            'rgba(231,233,237,0.7)',
-                            'rgba(54,162,235,0.7)'
-                        ]
+                        label: currentSelection,
+                        backgroundColor: 'rgba(255,99,132,0.5)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        pointBackgroundColor: "rgb(255, 99, 132)",
+                        pointBorderColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverBackgroundColor: "rgb(255, 99, 132)",
+                        pointHoverBorderColor: "rgb(255, 99, 132, 0.5)",
+                        pointRadius: 5,
+                        pointHoverRadius: 5
                     }
                 ],
                 labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']

@@ -1,26 +1,20 @@
 import React from 'react';
-import { Polar } from 'react-chartjs-2';
+import { Radar, defaults } from 'react-chartjs-2';
 import './Chart.css';
 
 const Chart = ({ data }) => {
-  let legend = { display: false };
-  const isTouchDevice = window.matchMedia('(hover: none)');
-  if (isTouchDevice.matches) {
-    legend = {
-      display: true,
-      position: 'bottom',
-      labels: { usePointStyle: true },
-    };
-  }
-
+  console.log(defaults);
   return (
     <div className="chart-wrapper">
       {data === undefined ? (
         <h2>Loading...</h2>
       ) : (
-        <Polar
+        <Radar
           data={data}
-          options={{
+          options={{ 
+            animation: {
+              easing: 'easeInOutQuart'
+            },
             maintainAspectRatio: false,
             responsive: true,
             layout: {
@@ -29,10 +23,10 @@ const Chart = ({ data }) => {
             scale: {
               ticks: {
                 suggestedMin: 0,
-                suggestedMax: 5,
-              },
+                suggestedMax: 50,
+              }
             },
-            legend,
+            legend: { display: false },
             tooltips: {
               callbacks: {
                 title(tooltipItem, data) {
@@ -43,11 +37,6 @@ const Chart = ({ data }) => {
                 },
               },
             },
-            backgroundColor: 'rgba(0,0,0,0.7)',
-            titleFontSize: 12,
-            titleFontColor: '#fff',
-            bodyFontColor: '#fff',
-            bodyFontSize: 12,
             displayColors: true,
           }}
         />
