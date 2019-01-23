@@ -9,13 +9,25 @@ import Data from './components/Data/Data';
 import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
 import Heart from './images/svg-bgs/heart.svg';
-
 //dynamically import files
 const Footer = React.lazy(() => import('./components/Footer/Footer'));
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
 let loveHearts = [];
+const backgroundColors = [
+    'rgba(255,99,132,0.7)',
+    'rgba(75,192,192,0.7)',
+    'rgba(255,206,86,0.7)',
+    'rgba(54,162,235,0.7)',
+    'rgba(231,233,237,0.7)'
+];
+const pointColors = [
+    'rgba(255,99,132,1)',
+    'rgba(75,192,192,1)',
+    'rgba(255,206,86,1)',
+    'rgba(54,162,235,1)'
+]
 
 const dataExtractor = (catIndex) => {
     return chartData[catIndex].reduce((data, technology) => {
@@ -47,7 +59,8 @@ class App extends Component {
             currentTopic: currentTopic,
             rawData: rawData,
             contributors: [],
-            headerClass: "navbar navbar-expand-lg navbar-light fixed-top"
+            headerClass: "navbar navbar-expand-lg navbar-light fixed-top",
+            chartChoice: "Polar"
         }
         this.keyCount = 0;
 
@@ -83,15 +96,15 @@ class App extends Component {
                     {
                         data: [gJobArray[cIndex], usJobArray[cIndex], supJobArray[cIndex], remJobArray[cIndex]],
                         label: currentSelection,
-                        backgroundColor: 'rgba(255,99,132,0.5)',
-                        borderColor: 'rgb(255, 99, 132)',
-                        pointBackgroundColor: "rgb(255, 99, 132)",
+                        backgroundColor: this.state.chartChoice==="Polar"?backgroundColors:backgroundColors[4],
+                        borderColor: 'white',
+                        pointBackgroundColor: pointColors,
                         pointBorderColor: "#fff",
                         pointBorderWidth: 2,
-                        pointHoverBackgroundColor: "rgb(255, 99, 132)",
-                        pointHoverBorderColor: "rgb(255, 99, 132, 0.5)",
+                        pointHoverBackgroundColor: pointColors,
+                        pointHoverBorderColor: pointColors,
                         pointRadius: 5,
-                        pointHoverRadius: 5
+                        pointHoverRadius: 7
                     }
                 ],
                 labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']
@@ -133,6 +146,14 @@ class App extends Component {
         loveHearts = this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20);
     }
 
+    changeChart = () => {
+        const choice =  this.state.chartChoice==="Polar"?"Radar":"Polar";
+        this.setState(
+            {
+                chartChoice: choice
+            }, ()=>{this.getData(this.state.currentTopic)})
+    }
+
     handleScroll = () => {
         //"navbar navbar-expand-md navbar-light fixed-top"
         if (window.scrollY <= 10 ) {
@@ -143,7 +164,7 @@ class App extends Component {
     }
 
     render() {
-        const { cData, rawData, currentTopic, contributors } = this.state;
+        const { cData, rawData, currentTopic, contributors, chartChoice } = this.state;
         return (
             <div id="top" ref={(ref) => this.scrollIcon = ref}>
                 <Header headerClass={this.state.headerClass} />
@@ -156,7 +177,13 @@ class App extends Component {
                             <h5 className="pr-1">Developer Love:</h5>
                             <h5 className="pl-1 anim-waving ">{ loveHearts }</h5>
                         </Tooltip>
-                        <Chart data={ cData } />
+                        <Chart data={ cData } type={ chartChoice } />
+                        <div className="switch">
+                            <label>
+                                Polar <input onClick={this.changeChart} type="checkbox"/>
+                                <span className="lever"></span> Radar
+                            </label>
+                        </div>
                     </div>
                 </section>
                 <Newsletter />
