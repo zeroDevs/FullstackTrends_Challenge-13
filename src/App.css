@@ -160,3 +160,13 @@ h2 {
         transform: translate(0, 0px);
     }
 }
+
+.chartHolder {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.chartHolder .toolbox {
+    justify-self: left;
+    align-self: center
+}

@@ -9,6 +9,7 @@ import Data from './components/Data/Data';
 import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
 import Heart from './images/svg-bgs/heart.svg';
+import Switch from './components/Switch/Switch';
 //dynamically import files
 const Footer = React.lazy(() => import('./components/Footer/Footer'));
 
@@ -20,9 +21,9 @@ const backgroundColors = [
     'rgba(75,192,192,0.7)',
     'rgba(255,206,86,0.7)',
     'rgba(54,162,235,0.7)',
-    'rgba(231,233,237,0.7)'
+    'rgba(170,13,197,0.5)' //last color is used for the Radar chart
 ];
-const pointColors = [
+const pointColors = [  // these are used for the points on the Radar chart
     'rgba(255,99,132,1)',
     'rgba(75,192,192,1)',
     'rgba(255,206,86,1)',
@@ -60,7 +61,8 @@ class App extends Component {
             rawData: rawData,
             contributors: [],
             headerClass: "navbar navbar-expand-lg navbar-light fixed-top",
-            chartChoice: "Polar"
+            chartChoice: "Polar",
+            scale: 55
         }
         this.keyCount = 0;
 
@@ -98,6 +100,8 @@ class App extends Component {
                         label: currentSelection,
                         backgroundColor: this.state.chartChoice==="Polar"?backgroundColors:backgroundColors[4],
                         borderColor: 'white',
+                        hoverBorderColor: 'white',
+                        hoverBackgroundColor: pointColors,
                         pointBackgroundColor: pointColors,
                         pointBorderColor: "#fff",
                         pointBorderWidth: 2,
@@ -154,6 +158,12 @@ class App extends Component {
             }, ()=>{this.getData(this.state.currentTopic)})
     }
 
+    scaleChange = (event) => {
+        this.setState({
+            scale: Number(event.target.value)
+        });
+    }
+
     handleScroll = () => {
         //"navbar navbar-expand-md navbar-light fixed-top"
         if (window.scrollY <= 10 ) {
@@ -164,7 +174,7 @@ class App extends Component {
     }
 
     render() {
-        const { cData, rawData, currentTopic, contributors, chartChoice } = this.state;
+        const { cData, rawData, currentTopic, contributors, chartChoice, scale } = this.state;
         return (
             <div id="top" ref={(ref) => this.scrollIcon = ref}>
                 <Header headerClass={this.state.headerClass} />
@@ -177,12 +187,17 @@ class App extends Component {
                             <h5 className="pr-1">Developer Love:</h5>
                             <h5 className="pl-1 anim-waving ">{ loveHearts }</h5>
                         </Tooltip>
-                        <Chart data={ cData } type={ chartChoice } />
-                        <div className="switch">
-                            <label>
-                                Polar <input onClick={this.changeChart} type="checkbox"/>
-                                <span className="lever"></span> Radar
-                            </label>
+                        <div className="chartHolder">
+                            <Chart data={ cData } type={ chartChoice } maxScale={ scale } />
+                            <div className="toolbox">
+                                <h5>Toolbox:</h5>
+                                <br/>
+                                <p>Chart type</p>
+                                <Switch onClick={ this.changeChart } leftText="Polar" rightText="Radar" />
+                                <br/>
+                                <p>Max scale</p>
+                                <input type="range" onChange={ this.scaleChange }/>
+                            </div>
                         </div>
                     </div>
                 </section>
