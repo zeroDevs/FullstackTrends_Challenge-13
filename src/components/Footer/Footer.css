@@ -1,5 +1,6 @@
 .footer {
     background: #201e1c;
+    font-size: 15px;
 }
 
 footer .socials i {
@@ -12,13 +13,15 @@ footer .socials i:hover {
 }
 
 .credits h5 {
-    margin-top: 20px;
-    color: #8d8d8d;
-    font-family: 'Ubuntu', sans-serif;
+    margin: 20px 0;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .credits li {
     list-style-type: none;
-    color: #fff
+    color: #8d8d8d;
+    font-family: 'Comfortaa', cursive;
+    font-size: 15px;
 }
 .credits li:hover {
     color: var(--one);
@@ -31,13 +34,18 @@ footer .socials i:hover {
     background-color: #0e0f0f;
     color: #8d8d8d;
     text-align: center;
-    padding: 20px
+    padding: 25px 0 15px 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: small
 }
 
 .fab {
     color: #ffffff;
 }
 
+.footer-wave{
+    transform: translateY(4px);
+}
 
 @media only screen and (max-width: 800px) {
     .footer {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
@@ -6,57 +6,75 @@ import Chart from './components/Chart/Chart';
 import Rank from './components/Rank/Rank';
 import Newsletter from './components/Newsletter/Newsletter';
 import Data from './components/Data/Data';
-import Footer from './components/Footer/Footer';
+import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
+import Heart from './images/svg-bgs/heart.svg';
+
+//dynamically import files
+const Footer = React.lazy(() => import('./components/Footer/Footer'));
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
+let loveHearts = [];
 
 const dataExtractor = (catIndex) => {
-
-    let lArray = [];
-    let dlArray = [];
-    let gArray = [];
-    let usArray = [];
-    let supArray = [];
-    let remArray = [];
-
-    for (let i = 0; i < chartData[catIndex].length; i++) {
-        lArray.push(chartData[catIndex][i].name);
-        dlArray.push(chartData[catIndex][i].devLove);
-        gArray.push(chartData[catIndex][i].gJobDemand);
-        usArray.push(chartData[catIndex][i].usJobDemand);
-        supArray.push(chartData[catIndex][i].supJobDemand);
-        remArray.push(chartData[catIndex][i].remJobDemand);
-
-    }
-
-    return ({
-        langArray: lArray,
-        devLoveArray: dlArray,
-        gJobArray: gArray,
-        usJobArray: usArray,
-        supJobArray: supArray,
-        remJobArray: remArray,
-    })
-}
+    return chartData[catIndex].reduce((data, technology) => {
+        data.langArray.push(technology.name);
+        data.devLoveArray.push(technology.devLove);
+        data.gJobArray.push(technology.gJobDemand);
+        data.usJobArray.push(technology.usJobDemand);
+        data.supJobArray.push(technology.supJobDemand);
+        data.remJobArray.push(technology.remJobDemand);
+        return data;
+    }, {
+            langArray: [],
+            devLoveArray: [],
+            gJobArray: [],
+            usJobArray: [],
+            supJobArray: [],
+            remJobArray: []
+        });
+};
 
 class App extends Component {
     constructor() {
         super();
+        const currentTopic = chartData[currentCatIndexGlobal][0].name;
+        const rawData = dataExtractor(currentCatIndexGlobal);
+
         this.state = {
             cData: {},
-            currentTopic: chartData[currentCatIndexGlobal][0].name,
-            rawData: dataExtractor(currentCatIndexGlobal),
+            currentTopic: currentTopic,
+            rawData: rawData,
+            contributors: [],
+            headerClass: "navbar navbar-expand-lg navbar-light fixed-top"
         }
+        this.keyCount = 0;
+
+        this.getKey = this.getKey.bind(this);
+        this.setLoveHearts(currentTopic, rawData);
+    }
+
+    getKey(){
+        return this.keyCount++;
+    }
+
+    fetchContributors = async () => {
+        await fetch('https://api.github.com/repos/zeroDevs/coding_challenge-13/contributors')
+            .then(res => res.json())
+            .then(json => this.setState({
+                contributors: json
+            }));
     }
 
     componentDidMount() {
         this.getData(this.state.currentTopic);
+        this.fetchContributors();
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     getData(currentSelection) {
-        const {langArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.rawData;
+        const { langArray, gJobArray, usJobArray, supJobArray, remJobArray } = this.state.rawData;
         const cIndex = langArray.indexOf(currentSelection);
 
         this.setState({
@@ -78,6 +96,8 @@ class App extends Component {
                 labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']
             }
         });
+
+        this.setLoveHearts(currentSelection, this.state.rawData);
     }
 
     onTopicClick = (topic) => {
@@ -89,28 +109,60 @@ class App extends Component {
         this.setState({
             rawData: dataExtractor(index)
         },
-        ()=>{
-            this.getData(this.state.rawData.langArray[0]);
-        })
+            () => {
+                this.getData(this.state.rawData.langArray[0]);
+            })
+    }
+    returnLove = (redHearts) => {
+        let maxHearts = 5;
+        const hearts = [];
+
+        while(redHearts--)
+        {
+            hearts.push(<img src={Heart} alt="active love" height="25" key={this.getKey()} />);
+            maxHearts--;
+        }
+        while(maxHearts--)
+            hearts.push(<img src={Heart} alt="inactive love" height="25" key={this.getKey()} style={{filter: "grayscale(1)"}} />)
+
+        return hearts;
+    }
+
+    setLoveHearts = (currentTopic, rawData) => {
+        loveHearts = this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20);
+    }
+
+    handleScroll = () => {
+        //"navbar navbar-expand-md navbar-light fixed-top"
+        if (window.scrollY <= 10 ) {
+            this.setState({headerClass: "navbar navbar-expand-lg navbar-light fixed-top"})
+        } else if (this.state.headerClass === "navbar navbar-expand-lg navbar-light fixed-top"){
+            this.setState({headerClass: "navbar navbar-expand-lg navbar-light fixed-top scroll smLogo"})
+        }
     }
 
     render() {
-        const {cData, rawData, currentTopic} = this.state;
+        const { cData, rawData, currentTopic, contributors } = this.state;
         return (
-            <div id="top">
-                <Header />
-                <Navigation onNavClick={this.onNavClick}/>
+            <div id="top" ref={(ref) => this.scrollIcon = ref}>
+                <Header headerClass={this.state.headerClass} />
+                <Navigation onNavClick={ this.onNavClick } currentCategoryIndex={ currentCatIndexGlobal } />
                 <section className="trends">
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
-                        <Rank langArray={rawData.langArray} onTopicClick={this.onTopicClick} checkbox={currentTopic} />
-                        <h5 className="mb-4">Love by Community: {rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20} / 5</h5>
-                        <Chart data={cData} />
+                        <Rank langArray={ rawData.langArray } onTopicClick={ this.onTopicClick } checkbox={ currentTopic } />
+                        <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, Google searches, and satisfaction surveys, etc..'>
+                            <h5 className="pr-1">Developer Love:</h5>
+                            <h5 className="pl-1 anim-waving ">{ loveHearts }</h5>
+                        </Tooltip>
+                        <Chart data={ cData } />
                     </div>
                 </section>
                 <Newsletter />
-                <Data chartData={cData} location={false} />
-                <Footer />
+                <Data loveFunction={ this.returnLove } />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Footer contrib={ contributors } />
+                </Suspense>
             </div>
         );
     }

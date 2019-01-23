@@ -1,10 +1,14 @@
 import React from 'react';
-// import {Polar} from 'react-chartjs-2';
-import { mount } from 'enzyme';
-
+import { shallow, mount } from 'enzyme';
 import Chart from '../components/Chart/Chart';
 
-
+window.matchMedia = jest.fn().mockImplementation(query => ({
+  matches: false,
+  media: query,
+  onchange: null,
+  addListener: jest.fn(),
+  removeListener: jest.fn(),
+}));
 
 describe('Chart', () => {
   let props;
@@ -30,4 +34,26 @@ describe('Chart', () => {
     const divs = chart().find('div');
     expect(divs.length).toBeGreaterThan(0);
   });
+
+  describe('render the Chart div', () => {
+    it('should have a data prop with undefined value', () => {
+      const dataNull = undefined;
+
+      expect(dataNull).toEqual(chart().props().data);
+    });
+
+    it('should render an h2 tag', () => {
+      expect(shallow(<Chart {...props} />).contains(<h2>Loading...</h2>)).toBe(true);
+    });
+
+    it('should not render a h2 tag', () => {
+      const props = {
+        data: {},
+        legend: undefined,
+      };
+      expect(shallow(<Chart {...props} />).contains(<h2>Loading...</h2>)).toBe(false);
+    });
+  });
 });
+
+
