@@ -16,7 +16,7 @@ const Footer = ({ contrib }) => (
             </a>
             <p className="text-muted text-left">
               Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile,
-              Programming Languages, Backend
+              Programming Languages and Backend
             </p>
             <div className="socials text-white pt-2">
               <a href="https://medium.com/zerotomastery" target="_blank" rel="noopener noreferrer">
