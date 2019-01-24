@@ -1,6 +1,6 @@
 #newsletter .content {
     background: #FFFFFF;
-    padding: 50px
+    padding: 50px;
 }
 
 .ml-form-embedWrapper {
@@ -12,7 +12,7 @@
 }
 
 .ml-form-embedContent h4 {
-    font-family: 'Ubuntu', sans-serif!important;
+    font-family: 'Comfortaa', cursive!important;
     color: var(--five)!important;
     font-size: 2em!important;
     text-align: center!important;
