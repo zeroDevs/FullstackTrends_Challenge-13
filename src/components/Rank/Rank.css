@@ -11,9 +11,8 @@
 }
 
 .ranked-langs {
-    display: grid;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -26,3 +25,9 @@
 .pretty {
     margin-bottom: 16px;   
 }
+
+@media (max-width: 560px) {
+    .ranked-langs  {
+        flex-flow: column;
+    }
+  }
