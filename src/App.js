@@ -16,6 +16,7 @@ const Footer = React.lazy(() => import('./components/Footer/Footer'));
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
 let loveHearts = [];
+const chartTitle = [' Web Technologies', ' Mobile Technologies', ' Programming Languages', ' Backend Technologies'];
 
 const dataExtractor = (catIndex) => {
     return chartData[catIndex].reduce((data, technology) => {
@@ -55,7 +56,7 @@ class App extends Component {
         this.setLoveHearts(currentTopic, rawData);
     }
 
-    getKey(){
+    getKey() {
         return this.keyCount++;
     }
 
@@ -117,13 +118,12 @@ class App extends Component {
         let maxHearts = 5;
         const hearts = [];
 
-        while(redHearts--)
-        {
-            hearts.push(<img src={Heart} alt="active love" height="25" key={this.getKey()} />);
+        while (redHearts--) {
+            hearts.push(<img src={ Heart } alt="active love" height="25" key={ this.getKey() } />);
             maxHearts--;
         }
-        while(maxHearts--)
-            hearts.push(<img src={Heart} alt="inactive love" height="25" key={this.getKey()} style={{filter: "grayscale(1)"}} />)
+        while (maxHearts--)
+            hearts.push(<img src={ Heart } alt="inactive love" height="25" key={ this.getKey() } style={ { filter: "grayscale(1)" } } />)
 
         return hearts;
     }
@@ -134,21 +134,22 @@ class App extends Component {
 
     handleScroll = () => {
         //"navbar navbar-expand-md navbar-light fixed-top"
-        if (window.scrollY <= 10 ) {
-            this.setState({headerClass: "navbar navbar-expand-lg navbar-light fixed-top"})
-        } else if (this.state.headerClass === "navbar navbar-expand-lg navbar-light fixed-top"){
-            this.setState({headerClass: "navbar navbar-expand-lg navbar-light fixed-top scroll smLogo"})
+        if (window.scrollY <= 10) {
+            this.setState({ headerClass: "navbar navbar-expand-lg navbar-light fixed-top" })
+        } else if (this.state.headerClass === "navbar navbar-expand-lg navbar-light fixed-top") {
+            this.setState({ headerClass: "navbar navbar-expand-lg navbar-light fixed-top scroll smLogo" })
         }
     }
 
     render() {
         const { cData, rawData, currentTopic, contributors } = this.state;
+
         return (
-            <div id="top" ref={(ref) => this.scrollIcon = ref}>
-                <Header headerClass={this.state.headerClass} />
+            <div id="top" ref={ (ref) => this.scrollIcon = ref }>
+                <Header headerClass={ this.state.headerClass } />
                 <Navigation onNavClick={ this.onNavClick } currentCategoryIndex={ currentCatIndexGlobal } />
                 <section className="trends">
-                    <h2 className="title">Top 5</h2>
+                    <h2 className="title">Top 5 { chartTitle[currentCatIndexGlobal] }</h2>
                     <div className="chart-container">
                         <Rank langArray={ rawData.langArray } onTopicClick={ this.onTopicClick } checkbox={ currentTopic } />
                         <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, Google searches, and satisfaction surveys, etc..'>
@@ -160,7 +161,7 @@ class App extends Component {
                 </section>
                 <Newsletter />
                 <Data loveFunction={ this.returnLove } />
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={ <div>Loading...</div> }>
                     <Footer contrib={ contributors } />
                 </Suspense>
             </div>
