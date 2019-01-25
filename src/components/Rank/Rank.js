@@ -27,4 +27,4 @@ const Rank = ({ langArray, onTopicClick, checkbox }) => {
   return <div className="ranked-langs">{ langArray.map(addLang) }</div>;
 };
 
-export default React.memo(Rank);
+export default Rank;
