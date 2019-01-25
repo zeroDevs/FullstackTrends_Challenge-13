@@ -17,6 +17,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "mikeattara",
+      "name": "Mike Perry Y Attara",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/31483629?v=4",
+      "profile": "https://mikeattara.com",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
