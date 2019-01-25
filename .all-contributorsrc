@@ -1,0 +1,23 @@
+{
+  "projectName": "coding_challenge-13",
+  "projectOwner": "zeroDevs",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "The24thDS",
+      "name": "David Sima",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/26633429?v=4",
+      "profile": "https://github.com/The24thDS",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
