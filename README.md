@@ -1,4 +1,5 @@
 # Coding Challenge 13 - www.fullstacktrends.com
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 We are trying something unique this month. Instead of everyone working on their own project, we are going to be working on one project together which we will put on www.producthunt.com at the end of the month and actually see how it does in the real world! 
 
@@ -48,3 +49,15 @@ The top 5 technologies where based on these numbers as well as the potential for
 
 ## One Last Thing
 **As with all my challenges there is zero benefit or monetary gain I receive from it. This is just my way of thanking my students and making sure that you are able to continue gaining valuable knowledge outside of just my videos. It would mean a lot to me if you are able to rate my course...5 star reviews make my day :)**
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars0.githubusercontent.com/u/26633429?v=4" width="100px;" alt="David Sima"/><br /><sub><b>David Sima</b></sub>](https://github.com/The24thDS)<br />[🐛](https://github.com/zeroDevs/coding_challenge-13/issues?q=author%3AThe24thDS "Bug reports") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
