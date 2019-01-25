@@ -12,12 +12,12 @@ const callbacks = {
 const style = {
   displayColors: true,
 }
-const Chart = ({ data, type, maxScale }) => {
+const Chart = ({ data, type, zoomLevel }) => {
   const scale = {
     ticks: {
       suggestedMin: 0,
-      suggestedMax: maxScale,
-      stepSize: maxScale<15?(maxScale<3?0.5:2):5
+      suggestedMax: zoomLevel,
+      stepSize: 5
     },
     pointLabels: {
       fontColor: 'black',

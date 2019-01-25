@@ -62,7 +62,7 @@ class App extends Component {
             contributors: [],
             headerClass: "navbar navbar-expand-lg navbar-light fixed-top",
             chartChoice: "Polar",
-            scale: 55
+            zoomLevel: 55
         }
         this.keyCount = 0;
 
@@ -158,9 +158,11 @@ class App extends Component {
             }, ()=>{this.getData(this.state.currentTopic)})
     }
 
-    scaleChange = (event) => {
+    zoom = (event) => {
+        console.log(this.state.cData.datasets[0].data)
+        //cData.datasets[0].data.reduce((acc, crt)=>crt>acc?crt:acc)
         this.setState({
-            scale: Number(event.target.value)
+            zoomLevel: 50-(Number(event.target.value)-50)
         });
     }
 
@@ -174,7 +176,7 @@ class App extends Component {
     }
 
     render() {
-        const { cData, rawData, currentTopic, contributors, chartChoice, scale } = this.state;
+        const { cData, rawData, currentTopic, contributors, chartChoice, zoomLevel } = this.state;
         return (
             <div id="top" ref={(ref) => this.scrollIcon = ref}>
                 <Header headerClass={this.state.headerClass} />
@@ -188,15 +190,17 @@ class App extends Component {
                             <h5 className="pl-1 anim-waving ">{ loveHearts }</h5>
                         </Tooltip>
                         <div className="chartHolder">
-                            <Chart data={ cData } type={ chartChoice } maxScale={ scale } />
+                            <Chart data={ cData } type={ chartChoice } zoomLevel={ zoomLevel } />
                             <div className="toolbox">
                                 <h5>Toolbox:</h5>
                                 <br/>
                                 <p>Chart type</p>
                                 <Switch onClick={ this.changeChart } leftText="Polar" rightText="Radar" />
                                 <br/>
-                                <p>Max scale</p>
-                                <input type="range" onChange={ this.scaleChange }/>
+                                <p>Zoom</p>
+                                <div className="zoomSlider">
+                                    <span>-</span><input type="range" min="1" max="99" step="5" value={100 - zoomLevel} onChange={ this.zoom }/><span>+</span>
+                                </div>
                             </div>
                         </div>
                     </div>

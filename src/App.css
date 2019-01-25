@@ -170,3 +170,14 @@ h2 {
     justify-self: left;
     align-self: center
 }
+
+.chartHolder .toolbox .zoomSlider {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center
+}
+
+.chartHolder .toolbox .zoomSlider>span {
+    font-size: 1.5em;
+    color: #2B2A2A;
+}
