@@ -1,7 +1,7 @@
 import React from 'react';
 import './Rank.css';
 
-const Rank = ({ langArray, onTopicClick, checkbox }) => {
+const Rank = React.memo(({ langArray, onTopicClick, checkbox }) => {
   const isChecked = lang => {
     if (checkbox === undefined && lang === langArray[0]) return true;
     if (checkbox === lang) return true;
@@ -25,6 +25,6 @@ const Rank = ({ langArray, onTopicClick, checkbox }) => {
   }
 
   return <div className="ranked-langs">{ langArray.map(addLang) }</div>;
-};
+});
 
 export default Rank;
