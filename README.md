@@ -1,5 +1,5 @@
 # Coding Challenge 13 - www.fullstacktrends.com
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 We are trying something unique this month. Instead of everyone working on their own project, we are going to be working on one project together which we will put on www.producthunt.com at the end of the month and actually see how it does in the real world! 
 
@@ -56,8 +56,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/26633429?v=4" width="100px;" alt="David Sima"/><br /><sub><b>David Sima</b></sub>](https://github.com/The24thDS)<br />[💻](https://github.com/zeroDevs/coding_challenge-13/commits?author=The24thDS "Code") | [<img src="https://avatars1.githubusercontent.com/u/31483629?v=4" width="100px;" alt="Mike Perry Y Attara"/><br /><sub><b>Mike Perry Y Attara</b></sub>](https://mikeattara.com)<br />[🤔](#ideas-mikeattara "Ideas, Planning, & Feedback") [💻](https://github.com/zeroDevs/coding_challenge-13/commits?author=mikeattara "Code") [👀](#review-mikeattara "Reviewed Pull Requests") |
-| :---: | :---: |
+| [<img src="https://avatars0.githubusercontent.com/u/26633429?v=4" width="100px;" alt="David Sima"/><br /><sub><b>David Sima</b></sub>](https://github.com/The24thDS)<br />[💻](https://github.com/zeroDevs/coding_challenge-13/commits?author=The24thDS "Code") [🐛](https://github.com/zeroDevs/coding_challenge-13/issues?q=author%3AThe24thDS "Bug reports") [👀](#review-The24thDS "Reviewed Pull Requests") | [<img src="https://avatars1.githubusercontent.com/u/31483629?v=4" width="100px;" alt="Mike Perry Y Attara"/><br /><sub><b>Mike Perry Y Attara</b></sub>](https://mikeattara.com)<br />[🤔](#ideas-mikeattara "Ideas, Planning, & Feedback") [💻](https://github.com/zeroDevs/coding_challenge-13/commits?author=mikeattara "Code") [👀](#review-mikeattara "Reviewed Pull Requests") | [<img src="https://avatars0.githubusercontent.com/u/39712415?v=4" width="100px;" alt="Akinwunmi Aguda"/><br /><sub><b>Akinwunmi Aguda</b></sub>](https://github.com/AkinAguda)<br />[🐛](https://github.com/zeroDevs/coding_challenge-13/issues?q=author%3AAkinAguda "Bug reports") |
+| :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
