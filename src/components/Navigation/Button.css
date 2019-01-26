@@ -1,4 +1,42 @@
-/* button {
+.center > div > button {
   width: 80%;
   background: rgba(255, 255, 255, 0.219);
-} */
+}
+
+.button-primary {
+  transition: all 0.4s;
+}
+
+.button-primary {
+  text-align: center;
+  color: var(--one);
+  padding: 8px 30px;
+  border-radius: 15px;
+  border: 1px solid var(--one);
+  margin: 0 10px;
+  background: transparent;
+  cursor: pointer !important;
+}
+
+.button-primary:focus {
+  outline: 0;
+}
+
+.button-primary:hover,
+.button-primary.active {
+  background-color: var(--three);
+  border-color: var(--three);
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .center > div > button {
+    width: 120px !important;
+  }
+}
+
+.button--icon {
+  padding-left: 0;
+  padding-right: 0;
+}
