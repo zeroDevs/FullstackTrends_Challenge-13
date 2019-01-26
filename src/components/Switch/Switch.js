@@ -12,4 +12,4 @@ const Switch = ({onClick, leftText, rightText}) => {
  )
 }
 
-export default Switch;
+export default React.memo(Switch);

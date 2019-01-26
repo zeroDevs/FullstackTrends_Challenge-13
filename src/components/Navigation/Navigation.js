@@ -40,4 +40,4 @@ const Navigation = ({ onNavClick, currentCategoryIndex }) => {
     </div>
   );
 };
-export default Navigation;
+export default React.memo(Navigation);

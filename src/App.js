@@ -162,8 +162,6 @@ class App extends Component {
     }
 
     zoom = (event) => {
-        console.log(this.state.cData.datasets[0].data)
-        //cData.datasets[0].data.reduce((acc, crt)=>crt>acc?crt:acc)
         this.setState({
             zoomLevel: 100-Number(event.target.value)
         });
