@@ -1,56 +1,50 @@
 import React from 'react';
-import { Polar } from 'react-chartjs-2';
+import { Polar, Radar } from 'react-chartjs-2';
 import './Chart.css';
-
-const Chart = ({ data }) => {
-  let legend = { display: false };
-  const isTouchDevice = window.matchMedia('(hover: none)');
-  if (isTouchDevice.matches) {
-    legend = {
-      display: true,
-      position: 'bottom',
-      labels: { usePointStyle: true },
-    };
+const callbacks = {
+  title(tooltipItem, data) {
+    return data.labels[tooltipItem[0].index];
+  },
+  label(tooltipItem, data) {
+    return ` ${data.datasets[0].data[tooltipItem.index]} %`;
+  },
+}
+const style = {
+  displayColors: true,
+}
+const Chart = ({ data, type, zoomLevel }) => {
+  const scale = {
+    ticks: {
+      suggestedMin: 0,
+      suggestedMax: zoomLevel,
+      stepSize: 5
+    },
+    pointLabels: {
+      fontColor: 'black',
+      fontSize: 16
+    }
   }
-
+  const options = {
+    maintainAspectRatio: false,
+    responsive: true,
+    aspectRatio: 1,
+    layout: {
+      padding: 10,
+    },
+    scale: scale,
+    legend: { display: false },
+    tooltips: {
+      callbacks: callbacks
+    },
+    style
+  }
+  const chart = type==="Polar"?<Polar data={data} options={Object.assign({startAngle: -0.75*Math.PI},options)}/> : <Radar data={data} options={options}/>;
   return (
     <div className="chart-wrapper">
       {data === undefined ? (
         <h2>Loading...</h2>
       ) : (
-        <Polar
-          data={data}
-          options={{
-            maintainAspectRatio: false,
-            responsive: true,
-            layout: {
-              padding: 10,
-            },
-            scale: {
-              ticks: {
-                suggestedMin: 0,
-                suggestedMax: 5,
-              },
-            },
-            legend,
-            tooltips: {
-              callbacks: {
-                title(tooltipItem, data) {
-                  return data.labels[tooltipItem[0].index];
-                },
-                label(tooltipItem, data) {
-                  return ` ${data.datasets[0].data[tooltipItem.index]} %`;
-                },
-              },
-            },
-            backgroundColor: 'rgba(0,0,0,0.7)',
-            titleFontSize: 12,
-            titleFontColor: '#fff',
-            bodyFontColor: '#fff',
-            bodyFontSize: 12,
-            displayColors: true,
-          }}
-        />
+        chart
       )}
     </div>
   );

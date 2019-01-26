@@ -1,78 +1,98 @@
-.nav-buttons {
-    margin-left: auto;
-    padding: 15px;
+.navbar.show {
+  background-color: white;
 }
-
-.button-primary {
-    transition: all 0.4s;
+.nav-buttons {
+  margin-left: auto;
+  padding: 15px;
 }
 
 .navbar-toggler {
-    transition: all 0.4s;
-    margin-left:auto;
+  transition: all 0.4s;
+  margin-left: auto;
+  padding: 0.25rem;
 }
 
 .navbar-toggler:focus {
-    outline:0;
+  outline: 0;
 }
 
 .navbar-toggler:hover {
-    background-color: var(--three);
+  background-color: var(--three);
 }
 
 .navbar-toggler:hover .toggle-button-line {
-    background: #fff;
+  background: #fff;
 }
 
 .toggle-button-line {
-	width: 30px;
-    height: 1.5px;
-    margin: 5px;
-	background: grey;
+  width: 1.25em;
+  height: 2px;
+  margin: 5px;
+  background: grey;
 }
 
 #header {
-    transition: all 0.4s;
+  transition: height 0.4s ease-in-out, background-color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
 }
 
 #header a {
-    color: var(--one);
+  color: var(--one);
 }
 
 #header .active {
-    color: #fff;
+  color: #fff;
 }
 
 #header a:hover {
-    color: #fff
+  color: #fff;
 }
-
+.logo-link {
+  /* display: inline-flex; */
+  width: 40%;
+  max-width: 250px;
+}
 .logo-active {
-    transition: height 0.3s;
-    cursor: pointer;
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out,
+    max-width 0.3s ease-in-out;
+  cursor: pointer;
+  min-width: 150px;
+  max-width: 250px;
+  width: auto;
+  height: 50px;
 }
 
 .scroll {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px var(--three);
-    height: 65px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px var(--three);
+  height: 65px;
 }
 
-.smLogo>a>img {
-    height: 40px;
-    position: relative;
-    transition: 0.3s;
+.smLogo > a > img {
+  height: 40px;
+  width: auto;
+  position: relative;
+  transition: height 0.3s ease-in-out;
+}
+.smLogo > a {
+  height: 40px;
 }
 
-.scroll>.nav-buttons {
-    position: relative;
+.scroll > .nav-buttons {
+  position: relative;
 }
 
 @media only screen and (max-width: 991px) {
-    #header {
-        background: rgba(255, 255, 255, 0.9);
-    }
-    .nav-buttons a:first-child {
-        margin-bottom: 7px;
-    }
+  .nav-buttons a:first-child {
+    margin-bottom: 7px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .scroll {
+    height: 45px;
+  }
+  .logo-active {
+    max-width: 150px;
+    height: auto;
+  }
 }

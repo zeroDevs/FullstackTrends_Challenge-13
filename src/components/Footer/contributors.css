@@ -17,11 +17,14 @@
 
 .contribCard>p {
     color: rgba(97, 97, 97, 0.589);
+    font-size: 12px;
+    margin-top: 0px
 }
 
 .contribCard h5 {
     color: var(--three);
     text-transform: uppercase;
+    margin: 20px 0 10px 0
 }
 
 .contribCard img {
@@ -31,6 +34,7 @@
 
 .modal-header h5 {
     margin: 0px;
+    color: var(--three)
 }
 
 .modal-body {

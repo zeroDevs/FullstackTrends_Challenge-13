@@ -1,0 +1,31 @@
+.switch input {
+    display: none;
+}
+
+.switch .lever {
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.switch .lever::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: var(--one);
+    border-radius: 50%;
+    left: -15px;
+    top: -4.5px;
+    transition: all 0.5s;
+}
+
+.switch input:checked+.lever::before {
+    background-color: rgb(170, 13, 197);
+    left: calc(100% - 15.5px);
+    transition: all 0.5s;
+}
