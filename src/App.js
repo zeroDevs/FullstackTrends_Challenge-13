@@ -113,6 +113,10 @@ class App extends Component {
                 ],
                 labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']
             }
+        },()=>{
+            this.setState({
+                minimZoom: 100 - Math.ceil(Math.max.apply(null, this.state.cData.datasets[0].data))
+            })
         });
 
         this.setLoveHearts(currentSelection, this.state.rawData);
@@ -162,7 +166,7 @@ class App extends Component {
         console.log(this.state.cData.datasets[0].data)
         //cData.datasets[0].data.reduce((acc, crt)=>crt>acc?crt:acc)
         this.setState({
-            zoomLevel: 50-(Number(event.target.value)-50)
+            zoomLevel: 100-Number(event.target.value)
         });
     }
 
@@ -176,7 +180,7 @@ class App extends Component {
     }
 
     render() {
-        const { cData, rawData, currentTopic, contributors, chartChoice, zoomLevel } = this.state;
+        const { cData, rawData, currentTopic, contributors, chartChoice, zoomLevel, minimZoom } = this.state;
         return (
             <div id="top" ref={(ref) => this.scrollIcon = ref}>
                 <Header headerClass={this.state.headerClass} />
@@ -199,7 +203,7 @@ class App extends Component {
                                 <br/>
                                 <p>Zoom</p>
                                 <div className="zoomSlider">
-                                    <span>-</span><input type="range" min="1" max="99" step="5" value={100 - zoomLevel} onChange={ this.zoom }/><span>+</span>
+                                    <span>-</span><input type="range" min="1" max={ minimZoom } step="1" onChange={ this.zoom }/><span>+</span>
                                 </div>
                             </div>
                         </div>
