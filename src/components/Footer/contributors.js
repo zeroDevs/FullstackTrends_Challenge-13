@@ -68,4 +68,4 @@ const Contrib = ({ contributors }) => {
   );
 };
      
-export default Contrib;
+export default React.memo(Contrib);

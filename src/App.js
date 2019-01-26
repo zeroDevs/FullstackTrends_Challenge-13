@@ -16,6 +16,7 @@ const Footer = React.lazy(() => import('./components/Footer/Footer'));
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
 let loveHearts = [];
+const chartTitle = [' Web Technologies', ' Mobile Technologies', ' Programming Languages', ' Backend Technologies'];
 
 const dataExtractor = (catIndex) => {
     return chartData[catIndex].reduce((data, technology) => {
@@ -46,10 +47,16 @@ class App extends Component {
             cData: {},
             currentTopic: currentTopic,
             rawData: rawData,
-            contributors: []
+            contributors: [],
         }
+        this.keyCount = 0;
 
+        this.getKey = this.getKey.bind(this);
         this.setLoveHearts(currentTopic, rawData);
+    }
+
+    getKey() {
+        return this.keyCount++;
     }
 
     fetchContributors = async () => {
@@ -62,7 +69,8 @@ class App extends Component {
 
     componentDidMount() {
         this.getData(this.state.currentTopic);
-        this.fetchContributors()
+        this.fetchContributors();
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     getData(currentSelection) {
@@ -108,12 +116,14 @@ class App extends Component {
     returnLove = (redHearts) => {
         let maxHearts = 5;
         const hearts = [];
+
         while (redHearts--) {
-            hearts.push(<img src={ Heart } alt="active love" height="25" />);
+            hearts.push(<img src={ Heart } alt="active love" height="25" key={ this.getKey() } />);
             maxHearts--;
         }
         while (maxHearts--)
-            hearts.push(<img src={ Heart } alt="inactive love" height="25" style={ { filter: "grayscale(1)" } } />)
+            hearts.push(<img src={ Heart } alt="inactive love" height="25" key={ this.getKey() } style={ { filter: "grayscale(1)" } } />)
+
         return hearts;
     }
 
@@ -123,12 +133,13 @@ class App extends Component {
 
     render() {
         const { cData, rawData, currentTopic, contributors } = this.state;
+
         return (
-            <div id="top">
-                <Header />
+            <div id="top" ref={ (ref) => this.scrollIcon = ref }>
+                <Header/>
                 <Navigation onNavClick={ this.onNavClick } currentCategoryIndex={ currentCatIndexGlobal } />
                 <section className="trends">
-                    <h2 className="title">Top 5</h2>
+                    <h2 className="title">Top 5 { chartTitle[currentCatIndexGlobal] }</h2>
                     <div className="chart-container">
                         <Rank langArray={ rawData.langArray } onTopicClick={ this.onTopicClick } checkbox={ currentTopic } />
                         <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, Google searches, and satisfaction surveys, etc..'>
@@ -140,7 +151,7 @@ class App extends Component {
                 </section>
                 <Newsletter />
                 <Data loveFunction={ this.returnLove } />
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={ <div>Loading...</div> }>
                     <Footer contrib={ contributors } />
                 </Suspense>
             </div>

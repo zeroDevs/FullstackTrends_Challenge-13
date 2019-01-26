@@ -1,0 +1,52 @@
+{
+  "projectName": "coding_challenge-13",
+  "projectOwner": "zeroDevs",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "The24thDS",
+      "name": "David Sima",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/26633429?v=4",
+      "profile": "https://github.com/The24thDS",
+      "contributions": [
+        "code",
+        "bug",
+        "review"
+      ]
+    },
+    {
+      "login": "mikeattara",
+      "name": "Mike Perry Y Attara",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/31483629?v=4",
+      "profile": "https://mikeattara.com",
+      "contributions": [
+        "ideas",
+        "code",
+        "review"
+      ]
+    },
+    {
+      "login": "AkinAguda",
+      "name": "Akinwunmi Aguda",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/39712415?v=4",
+      "profile": "https://github.com/AkinAguda",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jakebolam",
+      "name": "Jake Bolam",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3534236?v=4",
+      "profile": "https://jakebolam.com",
+      "contributions": []
+    }
+  ],
+  "contributorsPerLine": 7
+}
