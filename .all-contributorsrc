@@ -140,6 +140,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "luxumbra",
+      "name": "Dave Sayer",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/780350?v=4",
+      "profile": "https://crafted.im",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
