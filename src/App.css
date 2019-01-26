@@ -139,3 +139,24 @@ h2 {
     transform: translate(0, 0px);
   }
 }
+
+.chartHolder {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.chartHolder .toolbox {
+    justify-self: left;
+    align-self: center
+}
+
+.chartHolder .toolbox .zoomSlider {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center
+}
+
+.chartHolder .toolbox .zoomSlider>span {
+    font-size: 1.5em;
+    color: #2B2A2A;
+}
