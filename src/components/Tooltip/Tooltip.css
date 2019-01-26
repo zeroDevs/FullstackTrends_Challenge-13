@@ -14,6 +14,10 @@
     left: 35vw;
 }
 
+.source-chart .tooltipTextContainer {
+    left: 16vw;
+}
+
 .tooltipText {
     background-color: rgba(0, 0, 0, .85);
     color: #fff;
@@ -43,6 +47,12 @@
     border-style: solid;
 }
 
+.tooltipContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
 @media only screen and (min-width: 568px) {
     .tooltipTrigger {
         flex-direction: row;
@@ -53,8 +63,32 @@
     }
 }
 
-.tooltipContainer {
-    display: flex;
-    position: relative;
-    justify-content: center;
+@media (max-width: 1000px) {
+    .source-chart .tooltipTextContainer {
+        left: 20vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .source-chart .tooltipTextContainer {
+        left: 25vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .source-chart .tooltipTextContainer {
+        left: 30vw;
+    }
+}
+@media (max-width: 568px) {
+    .source-chart .tooltipTextContainer {
+        left: 35vw;
+        top: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .source-chart .tooltipTextContainer {
+        left: 40vw;
+    }
 }
