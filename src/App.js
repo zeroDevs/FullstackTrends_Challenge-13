@@ -36,8 +36,6 @@ const navToggler = document.getElementsByClassName('navbar-toggler');
 // Toggles the header background color to match the collapsible nav when using the navbar-toggler
 const headerToggle = () => {
     const header = document.querySelector('#header');
-    const collapsed = document.querySelector('.collapse');
-    const show = collapsed.classList.contains('show');
     return header.classList.toggle('show');
 }
 
