@@ -59,29 +59,6 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 25px;
 }
 
-.button-primary {
-  text-align: center;
-  color: var(--one);
-  padding: 8px 30px;
-  border-radius: 15px;
-  border: 1px solid var(--one);
-  margin: 0 10px;
-  background: transparent;
-  cursor: pointer !important;
-}
-
-.button-primary:focus {
-  outline: 0;
-}
-
-.button-primary:hover,
-.button-primary.active {
-  background-color: var(--three);
-  border-color: var(--three);
-  color: white;
-  text-decoration: none;
-}
-
 .trends {
   width: 80vw;
   margin: 30px auto;
