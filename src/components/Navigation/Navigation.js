@@ -1,40 +1,51 @@
 import React from 'react';
+import Button from './Button';
 import './Navigation.css';
 
 const Navigation = ({ onNavClick, currentCategoryIndex }) => {
   const isActive = categoryIndex =>
-    `button-primary button--icon${
-      categoryIndex === currentCategoryIndex ? " active boxx" : ""
-    }`;
+    `button-primary button--icon${categoryIndex === currentCategoryIndex ? ' active boxx' : ''}`;
   return (
     <div className="container">
       <div className="row center text-center">
         <div className="d-inline-block">
-          <button className={isActive(0)} onClick={() => onNavClick(0)}>
-            <i className="fas fa-globe" />
-            <span className="d-none d-sm-block sButton">Web</span>
-          </button>
+          <Button
+            btnType="button"
+            btnText="Web"
+            iconClass="fa-mobile-alt"
+            className={isActive(0)}
+            onClick={() => onNavClick(0)}
+          />
         </div>
 
         <div className="d-inline-block">
-          <button className={isActive(1)} onClick={() => onNavClick(1)}>
-            <i className="fas fa-mobile-alt" />
-            <span className="d-none d-sm-block sButton">Mobile</span>
-          </button>
+          <Button
+            btnType="button"
+            btnText="Mobile"
+            iconClass="fa-mobile-alt"
+            className={isActive(1)}
+            onClick={() => onNavClick(1)}
+          />
         </div>
 
         <div className="d-inline-block">
-          <button className={isActive(2)} onClick={() => onNavClick(2)}>
-            <i className="fas fa-code" />
-            <span className="d-none d-sm-block sButton">Languages</span>
-          </button>
+          <Button
+            btnType="button"
+            btnText="Languages"
+            iconClass="fa-code"
+            className={isActive(2)}
+            onClick={() => onNavClick(2)}
+          />
         </div>
 
         <div className="d-inline-block">
-          <button className={isActive(3)} onClick={() => onNavClick(3)}>
-            <i className="fas fa-server" />
-            <span className="d-none d-sm-block sButton">Backend</span>
-          </button>
+          <Button
+            btnType="button"
+            btnText="Backend"
+            iconClass="fa-server"
+            className={isActive(3)}
+            onClick={() => onNavClick(3)}
+          />
         </div>
       </div>
     </div>
