@@ -31,6 +31,16 @@ const pointColors = [  // these are used for the points on the Radar chart
 ]
 const chartTitle = [' Web Technologies', ' Mobile Technologies', ' Programming Languages', ' Backend Technologies'];
 
+const navToggler = document.getElementsByClassName('navbar-toggler');
+
+// Toggles the header background color to match the collapsible nav when using the navbar-toggler
+const headerToggle = () => {
+    const header = document.querySelector('#header');
+    const collapsed = document.querySelector('.collapse');
+    const show = collapsed.classList.contains('show');
+    return header.classList.toggle('show');
+}
+
 const dataExtractor = (catIndex) => {
     return chartData[catIndex].reduce((data, technology) => {
         data.langArray.push(technology.name);
@@ -86,6 +96,7 @@ class App extends Component {
         this.getData(this.state.currentTopic);
         this.fetchContributors();
         window.addEventListener('scroll', this.handleScroll);
+        navToggler[0].addEventListener('click', headerToggle);
     }
 
     getData(currentSelection) {
