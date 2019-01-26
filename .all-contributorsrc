@@ -1,145 +1,146 @@
 {
-    "projectName": "coding_challenge-13",
-    "projectOwner": "zeroDevs",
-    "repoType": "github",
-    "repoHost": "https://github.com",
-    "files": [
-        "README.md"
-    ],
-    "imageSize": 100,
-    "commit": true,
-    "contributors": [
-        {
-            "login": "The24thDS",
-            "name": "David Sima",
-            "avatar_url": "https://avatars0.githubusercontent.com/u/26633429?v=4",
-            "profile": "https://github.com/The24thDS",
-            "contributions": [
-                "code",
-                "bug",
-                "review"
-            ]
-        },
-        {
-            "login": "mikeattara",
-            "name": "Mike Perry Y Attara",
-            "avatar_url": "https://avatars1.githubusercontent.com/u/31483629?v=4",
-            "profile": "https://mikeattara.com",
-            "contributions": [
-                "ideas",
-                "code",
-                "review",
-                "test"
-            ]
-        },
-        {
-            "login": "AkinAguda",
-            "name": "Akinwunmi Aguda",
-            "avatar_url": "https://avatars0.githubusercontent.com/u/39712415?v=4",
-            "profile": "https://github.com/AkinAguda",
-            "contributions": [
-                "bug"
-            ]
-        },
-        {
-            "login": "jakebolam",
-            "name": "Jake Bolam",
-            "avatar_url": "https://avatars2.githubusercontent.com/u/3534236?v=4",
-            "profile": "https://jakebolam.com",
-            "contributions": [
-                "question"
-            ]
-        },
-        {
-            "login": "aneagoie",
-            "name": "Andrei Neagoie",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/10776230?v=4",
-            "profile": "https://github.com/aneagoie",
-            "contributions": [
-                "bug",
-                "code",
-                "ideas",
-                "review"
-            ]
-        },
-        {
-            "login": "MattCSmith",
-            "name": "Matt Smith",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/6190356?v=4",
-            "profile": "https://github.com/MattCSmith",
-            "contributions": [
-                "question",
-                "bug",
-                "code",
-                "ideas",
-                "review"
-            ]
-        },
-        {
-            "login": "bbaqui25",
-            "name": "Bushra Baqui",
-            "avatar_url": "https://avatars1.githubusercontent.com/u/38767320?v=4",
-            "profile": "https://github.com/bbaqui25",
-            "contributions": [
-                "ideas"
-            ]
-        },
-        {
-            "login": "mortenkos",
-            "name": "Morten",
-            "avatar_url": "https://avatars2.githubusercontent.com/u/25040343?v=4",
-            "profile": "https://github.com/mortenkos",
-            "contributions": [
-                "question",
-                "code"
-            ]
-        },
-        {
-            "login": "Feythelus",
-            "name": "Feythelus",
-            "avatar_url": "https://avatars3.githubusercontent.com/u/30155412?v=4",
-            "profile": "https://github.com/Feythelus",
-            "contributions": [
-                "bug",
-                "code"
-            ]
-        },
-        {
-            "login": "marcosandri-dev",
-            "name": "Marco Sandri",
-            "avatar_url": "https://avatars0.githubusercontent.com/u/26682816?v=4",
-            "profile": "https://github.com/marcosandri-dev",
-            "contributions": [
-                "code"
-            ]
-        },
-        {
-            "login": "GlynL",
-            "name": "Glyn Lewington",
-            "avatar_url": "https://avatars2.githubusercontent.com/u/28625651?v=4",
-            "profile": "https://github.com/GlynL",
-            "contributions": [
-                "code"
-            ]
-        },
-        {
-            "login": "uhayon",
-            "name": "uhayon",
-            "avatar_url": "https://avatars1.githubusercontent.com/u/16659034?v=4",
-            "profile": "https://github.com/uhayon",
-            "contributions": [
-                "code"
-            ]
-        },
-        {
-            "login": "peacethekuma",
-            "name": "Kuma Chan",
-            "avatar_url": "https://avatars0.githubusercontent.com/u/37570898?v=4",
-            "profile": "https://github.com/peacethekuma",
-            "contributions": [
-                "code"
-            ]
-        }
+  "projectName": "coding_challenge-13",
+  "projectOwner": "zeroDevs",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "The24thDS",
+      "name": "David Sima",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/26633429?v=4",
+      "profile": "https://github.com/The24thDS",
+      "contributions": [
+        "code",
+        "bug",
+        "review"
+      ]
+    },
+    {
+      "login": "mikeattara",
+      "name": "Mike Perry Y Attara",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/31483629?v=4",
+      "profile": "https://mikeattara.com",
+      "contributions": [
+        "ideas",
+        "code",
+        "review",
+        "test"
+      ]
+    },
+    {
+      "login": "AkinAguda",
+      "name": "Akinwunmi Aguda",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/39712415?v=4",
+      "profile": "https://github.com/AkinAguda",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jakebolam",
+      "name": "Jake Bolam",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3534236?v=4",
+      "profile": "https://jakebolam.com",
+      "contributions": [
+        "question",
+        "infra"
+      ]
+    },
+    {
+      "login": "aneagoie",
+      "name": "Andrei Neagoie",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/10776230?v=4",
+      "profile": "https://github.com/aneagoie",
+      "contributions": [
+        "bug",
+        "code",
+        "ideas",
+        "review"
+      ]
+    },
+    {
+      "login": "MattCSmith",
+      "name": "Matt Smith",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6190356?v=4",
+      "profile": "https://github.com/MattCSmith",
+      "contributions": [
+        "question",
+        "bug",
+        "code",
+        "ideas",
+        "review"
+      ]
+    },
+    {
+      "login": "bbaqui25",
+      "name": "Bushra Baqui",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/38767320?v=4",
+      "profile": "https://github.com/bbaqui25",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "mortenkos",
+      "name": "Morten",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/25040343?v=4",
+      "profile": "https://github.com/mortenkos",
+      "contributions": [
+        "question",
+        "code"
+      ]
+    },
+    {
+      "login": "Feythelus",
+      "name": "Feythelus",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/30155412?v=4",
+      "profile": "https://github.com/Feythelus",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "marcosandri-dev",
+      "name": "Marco Sandri",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/26682816?v=4",
+      "profile": "https://github.com/marcosandri-dev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "GlynL",
+      "name": "Glyn Lewington",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28625651?v=4",
+      "profile": "https://github.com/GlynL",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "uhayon",
+      "name": "uhayon",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16659034?v=4",
+      "profile": "https://github.com/uhayon",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "peacethekuma",
+      "name": "Kuma Chan",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/37570898?v=4",
+      "profile": "https://github.com/peacethekuma",
+      "contributions": [
+        "code"
+      ]
+    }
   ],
   "contributorsPerLine": 7
 }
