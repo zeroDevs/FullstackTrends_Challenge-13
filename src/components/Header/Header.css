@@ -22,13 +22,14 @@
 
 .toggle-button-line {
   width: 30px;
-  height: 1.5px;
+  height: 2px;
   margin: 5px;
   background: grey;
 }
 
 #header {
-  transition: all 0.4s;
+  transition: height 0.4s ease-in-out, background-color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
 }
 
 #header a {
@@ -42,10 +43,19 @@
 #header a:hover {
   color: #fff;
 }
-
+.logo-link {
+  /* display: inline-flex; */
+  width: 40%;
+  max-width: 250px;
+}
 .logo-active {
-  transition: height 0.3s;
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out,
+    max-width 0.3s ease-in-out;
   cursor: pointer;
+  min-width: 150px;
+  max-width: 250px;
+  width: auto;
+  height: 50px;
 }
 
 .scroll {
@@ -56,8 +66,12 @@
 
 .smLogo > a > img {
   height: 40px;
+  width: auto;
   position: relative;
-  transition: 0.3s;
+  transition: height 0.3s ease-in-out;
+}
+.smLogo > a {
+  height: 40px;
 }
 
 .scroll > .nav-buttons {
@@ -65,10 +79,16 @@
 }
 
 @media only screen and (max-width: 991px) {
-  #header {
-    background: rgba(255, 255, 255, 0.9);
-  }
   .nav-buttons a:first-child {
     margin-bottom: 7px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .scroll {
+    height: 45px;
+  }
+  .logo-active {
+    max-width: 150px;
+    height: auto;
   }
 }
