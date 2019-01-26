@@ -9,6 +9,9 @@
     position: absolute;
     width: 45%;
     min-width: 300px;
+    transform: translate(-50%, 0);
+    top: 50px;
+    left: 35vw;
 }
 
 .tooltipText {
@@ -28,7 +31,7 @@
     font-size: 18px;
 }
 
-.tooltipTrigger.bottom .tooltipTextContainer {
+.tooltipTrigger.bottom {
     top: 135px;
     left: 0;
 }
@@ -44,9 +47,9 @@
     .tooltipTrigger {
         flex-direction: row;
     }
-    .tooltipTrigger.bottom .tooltipTextContainer {
+    .tooltipTrigger.bottom {
         top: 50px;
-        left: auto;
+        left: 0;
     }
 }
 
