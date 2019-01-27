@@ -2,12 +2,12 @@ import React from 'react';
 import './contributors.css';
 
 const Contrib = ({ contributors }) => {
-  const contributorsList = contributors.filter(user => user.login !== 'allcontributors[bot]');
+  contributors.filter(user => user.login !== 'allcontributors[bot]');
 
   return (
     <div>
       <div className="cFooterlink" data-toggle="modal" data-target="#contribModal">
-        <li>& {contributorsList.length} Other Contributors</li>
+        <li>& {contributors.length} Other Contributors</li>
       </div>
 
       <div
@@ -29,7 +29,7 @@ const Contrib = ({ contributors }) => {
               </button>
             </div>
             <div className="modal-body row">
-              {contributorsList.map((user, index) => {
+              {contributors.map((user, index) => {
                 const prevContributions = {
                   MattCSmith: 74,
                   aneagoie: 30,
