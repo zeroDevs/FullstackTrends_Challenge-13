@@ -64,5 +64,11 @@
   var ml_account = ml('accounts', '1252504', 'i9w0t9r0s7', 'load');
 </script>
 <!-- End MailerLite Universal -->
+<script>
+  window.onscroll = () => {
+    const nav = document.querySelector('#header');
+    if (this.scrollY <= 10) nav.classList = 'navbar navbar-expand-lg navbar-light fixed-top'; else nav.className = 'navbar navbar-expand-lg navbar-light fixed-top scroll smLogo';
+  };
+</script>
 
 </html>

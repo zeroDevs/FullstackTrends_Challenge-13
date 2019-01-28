@@ -1,8 +1,20 @@
 .chart-wrapper {
-  height: 350px;
+  height: 90vh;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 750px) {
+  .chart-wrapper {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .chart-wrapper {
+    height: 53vh;
+  }
+}
+
+/* @media only screen and (min-width: 400px) {
   .chart-wrapper {
     height: 400px;
   }
@@ -12,4 +24,4 @@
   .chart-wrapper {
     height: 600px;
   }
-}
+} */
