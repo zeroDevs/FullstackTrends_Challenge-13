@@ -6,6 +6,9 @@ import logo from '../../images/logo1.png';
 const Header = () => (
   <section>
     <nav id="header" className="navbar navbar-expand-lg navbar-light fixed-top">
+      <Link to="top" smooth duration={800} offset={-131} className="logo-link">
+        <img src={logo} alt="logo" className="logo-active" />
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -15,14 +18,11 @@ const Header = () => (
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <div className="toggle-button-line"></div>
-		    <div className="toggle-button-line"></div>
-        <div className="toggle-button-line"></div>
+        <div className="toggle-button-line" />
+        <div className="toggle-button-line" />
+        <div className="toggle-button-line" />
       </button>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <Link to="top" smooth duration={800} offset={-131}>
-            <img src={logo} alt="logo" height="50" className="logo-active" />
-          </Link>
         <div className="navbar-nav nav-buttons">
           <Link
             to="newsletter"

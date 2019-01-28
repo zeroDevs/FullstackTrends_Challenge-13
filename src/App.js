@@ -9,14 +9,35 @@ import Data from './components/Data/Data';
 import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
 import Heart from './images/svg-bgs/heart.svg';
-
+import Switch from './components/Switch/Switch';
 //dynamically import files
 const Footer = React.lazy(() => import('./components/Footer/Footer'));
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
 let loveHearts = [];
+const backgroundColors = [
+    'rgba(255,99,132,0.7)',
+    'rgba(75,192,192,0.7)',
+    'rgba(255,206,86,0.7)',
+    'rgba(54,162,235,0.7)',
+    'rgba(170,13,197,0.5)' //last color is used for the Radar chart
+];
+const pointColors = [  // these are used for the points on the Radar chart
+    'rgba(255,99,132,1)',
+    'rgba(75,192,192,1)',
+    'rgba(255,206,86,1)',
+    'rgba(54,162,235,1)'
+]
 const chartTitle = [' Web Technologies', ' Mobile Technologies', ' Programming Languages', ' Backend Technologies'];
+
+const navToggler = document.getElementsByClassName('navbar-toggler');
+
+// Toggles the header background color to match the collapsible nav when using the navbar-toggler
+const headerToggle = () => {
+    const header = document.querySelector('#header');
+    return header.classList.toggle('show');
+}
 
 const dataExtractor = (catIndex) => {
     return chartData[catIndex].reduce((data, technology) => {
@@ -48,6 +69,8 @@ class App extends Component {
             currentTopic: currentTopic,
             rawData: rawData,
             contributors: [],
+            chartChoice: "Polar",
+            zoomLevel: 55
         }
         this.keyCount = 0;
 
@@ -71,30 +94,38 @@ class App extends Component {
         this.getData(this.state.currentTopic);
         this.fetchContributors();
         window.addEventListener('scroll', this.handleScroll);
+        navToggler[0].addEventListener('click', headerToggle);
     }
 
     getData(currentSelection) {
         const { langArray, gJobArray, usJobArray, supJobArray, remJobArray } = this.state.rawData;
         const cIndex = langArray.indexOf(currentSelection);
-
         this.setState({
             currentTopic: currentSelection,
             cData: {
                 datasets: [
                     {
                         data: [gJobArray[cIndex], usJobArray[cIndex], supJobArray[cIndex], remJobArray[cIndex]],
-                        label: 'Languages',
-                        backgroundColor: [
-                            'rgba(255,99,132,0.7)',
-                            'rgba(75,192,192,0.7)',
-                            'rgba(255,206,86,0.7)',
-                            'rgba(231,233,237,0.7)',
-                            'rgba(54,162,235,0.7)'
-                        ]
+                        label: currentSelection,
+                        backgroundColor: this.state.chartChoice==="Polar"?backgroundColors:backgroundColors[4],
+                        borderColor: 'white',
+                        hoverBorderColor: 'white',
+                        hoverBackgroundColor: pointColors,
+                        pointBackgroundColor: pointColors,
+                        pointBorderColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverBackgroundColor: pointColors,
+                        pointHoverBorderColor: pointColors,
+                        pointRadius: 5,
+                        pointHoverRadius: 7
                     }
                 ],
                 labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']
             }
+        },()=>{
+            this.setState({
+                minimZoom: 100 - Math.ceil(Math.max.apply(null, this.state.cData.datasets[0].data))
+            })
         });
 
         this.setLoveHearts(currentSelection, this.state.rawData);
@@ -131,9 +162,22 @@ class App extends Component {
         loveHearts = this.returnLove(rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20);
     }
 
-    render() {
-        const { cData, rawData, currentTopic, contributors } = this.state;
+    changeChart = () => {
+        const choice =  this.state.chartChoice==="Polar"?"Radar":"Polar";
+        this.setState(
+            {
+                chartChoice: choice
+            }, ()=>{this.getData(this.state.currentTopic)})
+    }
 
+    zoom = (event) => {
+        this.setState({
+            zoomLevel: 100-Number(event.target.value)
+        });
+    }
+
+    render() {
+        const { cData, rawData, currentTopic, contributors, chartChoice, zoomLevel, minimZoom } = this.state;
         return (
             <div id="top" ref={ (ref) => this.scrollIcon = ref }>
                 <Header/>
@@ -146,7 +190,20 @@ class App extends Component {
                             <h5 className="pr-1">Developer Love:</h5>
                             <h5 className="pl-1 anim-waving ">{ loveHearts }</h5>
                         </Tooltip>
-                        <Chart data={ cData } />
+                        <div className="chartHolder">
+                            <Chart data={ cData } type={ chartChoice } zoomLevel={ zoomLevel } />
+                            <div className="toolbox">
+                                <h5>Toolbox:</h5>
+                                <br/>
+                                <p>Chart type</p>
+                                <Switch onClick={ this.changeChart } leftText="Polar" rightText="Radar" />
+                                <br/>
+                                <p>Zoom</p>
+                                <div className="zoomSlider">
+                                    <span>-</span><input type="range" min="1" max={ minimZoom } step="1" onChange={ this.zoom }/><span>+</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <Newsletter />

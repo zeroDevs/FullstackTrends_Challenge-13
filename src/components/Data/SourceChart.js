@@ -21,6 +21,7 @@ const data = {
 
 const SourceChart = ({ loveFunction }) => {
   const hearts = loveFunction(4);
+  let screenWidth = window.innerWidth;
   return (
     <div>
       <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys, etc..'>
@@ -29,8 +30,8 @@ const SourceChart = ({ loveFunction }) => {
       </Tooltip>
       <Polar
         data={ data }
-        height={ 300 }
-        width={ 300 }
+        height={ (screenWidth <= 1110 && screenWidth >= 520) ? (400) : (300) }
+        width={ (screenWidth <= 1110 && screenWidth >= 520) ? (400) : (300) }
         options={ {
           maintainAspectRatio: true,
           responsive: false,
