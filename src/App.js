@@ -176,10 +176,23 @@ class App extends Component {
         });
     }
 
+    handleScroll = () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("returnTop").style.display = "block";
+        } else {
+          document.getElementById("returnTop").style.display = "none";
+        }
+      }
+
+    topFunction = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
     render() {
         const { cData, rawData, currentTopic, contributors, chartChoice, zoomLevel, minimZoom } = this.state;
         return (
-            <div id="top" ref={ (ref) => this.scrollIcon = ref }>
+            <div id="top" ref={ (ref) => this.scrollIcon = ref } onScroll={this.handleScroll}>
                 <Header/>
                 <Navigation onNavClick={ this.onNavClick } currentCategoryIndex={ currentCatIndexGlobal } />
                 <section className="trends">
@@ -211,6 +224,7 @@ class App extends Component {
                 <Suspense fallback={ <div>Loading...</div> }>
                     <Footer contrib={ contributors } />
                 </Suspense>
+                <button onClick={this.topFunction} id="returnTop" title="Return to top">Top</button>
             </div>
         );
     }
