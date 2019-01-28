@@ -144,13 +144,60 @@ h2 {
 }
 
 .chartHolder {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+    display: grid;
+    grid-template-areas: 
+      "switchbox switchbox"
+      "chart zoombox";
+    grid-template-columns: auto 100px;
+    align-items: center;
+}
+.chartWrapper {
+  width: 60vw;
 }
 
-.chartHolder .toolbox {
-  justify-self: left;
-  align-self: center
+.switchbox {
+  grid-area: switchbox;
+  margin: 16px;
+}
+
+.chartbox {
+  grid-area: chart;
+  width: 60vw;
+}
+
+.zoombox {
+  grid-area: zoombox;
+  transform: rotate(-90deg);
+  height: fit-content;
+  width: fit-content;
+  /* width: 60vh; */
+}
+
+.zoombox p {
+  transform: rotate(120deg);
+  font-size: 3rem;
+  align-self: center;
+  color: #e24e42;
+  font-weight: 700;
+  margin-top: -40px;
+}
+
+.zoomSlider>div {
+  transform: rotate(90deg);
+  font-size: 2em;
+  color: #e24e42;
+  margin: 8px;
+}
+.zoomSlider {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  margin-top: -40px;
+}
+
+/* .chartHolder .toolbox {
+    justify-self: left;
+    align-self: center
 }
 
 .chartHolder .toolbox .zoomSlider {
@@ -160,9 +207,9 @@ h2 {
 }
 
 .chartHolder .toolbox .zoomSlider>span {
-  font-size: 1.5em;
-  color: #2B2A2A;
-}
+    font-size: 1.5em;
+    color: #2B2A2A;
+} */
 
 #returnTop {
   /* display: none; */
