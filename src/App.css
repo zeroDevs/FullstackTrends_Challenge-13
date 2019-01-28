@@ -178,7 +178,8 @@ h2 {
   margin-top: -18px;
 }
 
-.zoomSlider>span {
+.zoomSlider>div {
+  transform: rotate(90deg);
   font-size: 2em;
   color: #e24e42;
   margin: 8px;

@@ -202,7 +202,7 @@ class App extends Component {
 							<div className="zoombox">
 							
 								<div className="zoomSlider">
-									<span>-</span><input className="slider" type="range" min="1" max={minimZoom} step="1" onChange={this.zoom} /><span>+</span>
+									<div>-</div><input className="slider" type="range" min="1" max={minimZoom} step="1" onChange={this.zoom} /><div>+</div>
 								</div>
 								<p>Zoom</p>
 							</div>
