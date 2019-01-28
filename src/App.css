@@ -174,11 +174,12 @@ h2 {
 }
 
 .zoombox p {
-  transform: rotate(180deg);
+  transform: rotate(120deg);
+  font-size: 3rem;
   align-self: center;
   color: #e24e42;
   font-weight: 700;
-  margin-top: -18px;
+  margin-top: -40px;
 }
 
 .zoomSlider>div {
