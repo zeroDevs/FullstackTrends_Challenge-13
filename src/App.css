@@ -14,6 +14,7 @@
   .trends {
     padding: 10px;
   }
+
   .ranked-langs {
     padding-bottom: 1rem !important;
   }
@@ -132,31 +133,56 @@ h2 {
   0% {
     transform: translate(0, 0px);
   }
+
   50% {
     transform: translate(0, -0.5rem);
   }
+
   100% {
     transform: translate(0, 0px);
   }
 }
 
 .chartHolder {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .chartHolder .toolbox {
-    justify-self: left;
-    align-self: center
+  justify-self: left;
+  align-self: center
 }
 
 .chartHolder .toolbox .zoomSlider {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    align-items: center
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  align-items: center
 }
 
 .chartHolder .toolbox .zoomSlider>span {
-    font-size: 1.5em;
-    color: #2B2A2A;
+  font-size: 1.5em;
+  color: #2B2A2A;
+}
+
+#returnTop {
+  /* display: none; */
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  z-index: 99;
+  text-align: center;
+  color: var(--one);
+  padding: 4px 15px;
+  border-radius: 15px;
+  /* border: 1px solid var(--one); */
+  margin: 0 10px;
+  background: transparent;
+  cursor: pointer !important;
+}
+
+#returnTop:hover {
+  background-color: var(--three);
+  border-color: var(--three);
+  color: white;
+  text-decoration: none;
 }
