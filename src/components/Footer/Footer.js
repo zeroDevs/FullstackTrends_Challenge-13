@@ -42,23 +42,16 @@ const Footer = ({ contrib }) => (
               <Modal>
                 <li className="grow">Zero To Mastery</li>
               </Modal>
-                <li className="grow">
-                  <a href="https://github.com/Dhaval1403" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    Dhaval Mehta
-                  </a>
-                </li>
-                </li className="grow">
-                  <Contrib contributors={contrib} />
-                </li>
+              <a href="https://github.com/Dhaval1403" target="_blank" rel="noopener noreferrer">
+                <li className="grow">Dhaval Mehta</li>
+              </a>
+              <Contrib contributors={contrib} />
             </ul>
           </div>
         </div>
       </div>
     </div>
-
+  
     <div className="copyright">
       © {new Date().getFullYear()} FullStack Trends. All Rights Reserved
     </div>
