@@ -10,6 +10,7 @@ const Contrib = ({ contributors }) => {
     aneagoie: 30,
     Dhaval1403: 19,
     anantankur: 11,
+    The24thDS: -50    //contributions resulted from adding other contributors using @all-contributors
   }
 
   // Remove the bot and add prevContribs

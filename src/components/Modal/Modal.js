@@ -36,6 +36,7 @@ class Modal extends Component {
 
     // The modal "window"
     const modalStyle = {
+      fontFamily: 'Comfortaa, sans-serif',
       backgroundColor: '#fff',
       textAlign: 'justify',
       borderRadius: 5,
