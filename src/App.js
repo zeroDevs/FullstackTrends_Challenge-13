@@ -204,18 +204,18 @@ class App extends Component {
 							<h5 className="pl-1 anim-waving ">{loveHearts}</h5>
 						</Tooltip>
 						<div className="chartHolder">
+							<div className="chartbox">
+							<Chart data={cData} type={chartChoice} zoomLevel={zoomLevel} />
+							</div>
 							<div className="switchbox">
 								<p>Chart type</p>
 								<Switch onClick={this.changeChart} leftText="Polar" rightText="Radar" />
 							</div>
-							<div className="chartbox">
-							<Chart data={cData} type={chartChoice} zoomLevel={zoomLevel} />
-							</div>
 							<div className="zoombox">
+								<p>Zoom</p>
 								<div className="zoomSlider">
 									<div>-</div><input className="slider" type="range" min="1" max={minimZoom} step="1" onChange={this.zoom} /><div>+</div>
 								</div>
-								<p>&#9906;</p>
 							</div>
 						</div>
 					</div>
