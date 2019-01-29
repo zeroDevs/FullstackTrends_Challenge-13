@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Modal.css';
 
-class Modal extends React.Component {
+class Modal extends Component {
   constructor() {
     super();
     this.state = {
