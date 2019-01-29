@@ -302,6 +302,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "Interprise13",
+      "name": "Ryan Marsh",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/29083848?v=4",
+      "profile": "https://github.com/Interprise13",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
