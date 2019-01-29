@@ -233,6 +233,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "SHoar",
+      "name": "Sean Hoar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1499951?v=4",
+      "profile": "http://www.seanhoar.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
