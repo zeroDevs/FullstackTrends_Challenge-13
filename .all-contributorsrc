@@ -224,6 +224,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "porschefish",
+      "name": "porschefish",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/45741443?v=4",
+      "profile": "https://github.com/porschefish",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
