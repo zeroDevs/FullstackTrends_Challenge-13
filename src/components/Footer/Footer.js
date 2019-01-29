@@ -43,15 +43,6 @@ const Footer = ({ contrib }) => (
                 <li className="grow">Zero To Mastery</li>
               </Modal>
               <li className="grow">
-                <a
-                  href="https://github.com/Dhaval1403" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Dhaval Mehta
-                </a>
-              </li>
-              <li className="grow">
                 <Contrib contributors={contrib} />
               </li>
             </ul>
