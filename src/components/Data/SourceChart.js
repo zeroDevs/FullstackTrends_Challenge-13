@@ -40,7 +40,7 @@ const SourceChart = ({ loveFunction }) => {
           },
           layout: {
             padding: 10,
-          }
+          },
           tooltips: {
             callbacks: {
               title(tooltipItem, data) {
