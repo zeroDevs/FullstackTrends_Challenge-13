@@ -2,12 +2,42 @@ import React from 'react';
 import './contributors.css';
 
 const Contrib = ({ contributors }) => {
-  const contributorsList = contributors.filter(user => user.login !== 'allcontributors[bot]');
+
+  // Contributions from previous Repo
+  const prevContribs = {
+    MattCSmith: 74,
+    aneagoie: 30,
+    Dhaval1403: 19,
+    anantankur: 11,
+  }
+
+  // Remove the bot and add prevContribs
+  const contributorsList = contributors.filter(user => {
+    if (user.login !== 'allcontributors[bot]') {
+      if (prevContribs[user.login] !== undefined) user.contributions += prevContribs[user.login]
+      return user;
+    }
+  })
+
+  // Used to inject Dhaval previous stats, if he is unable to make a new PR
+  if (contributorsList.filter(user => user.login === 'Dhaval').length === 0) contributorsList.push(
+    {
+      "login": "Dhaval",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/24822319?s=460&v=4",
+      "html_url": "https://github.com/Dhaval403",
+      "contributions": 19
+    }
+  )
+
+  const sortedList = contributorsList.sort(function (a, b) {
+    console.log(a)
+    return b.contributions - a.contributions;
+  });
 
   return (
     <div>
       <div className="cFooterlink" data-toggle="modal" data-target="#contribModal">
-        <li>& {contributorsList.length} Other Contributors</li>
+        <li>& {sortedList.length} Other Contributors</li>
       </div>
 
       <div
@@ -29,18 +59,7 @@ const Contrib = ({ contributors }) => {
               </button>
             </div>
             <div className="modal-body row">
-              {contributorsList.map((user, index) => {
-                const prevContributions = {
-                  MattCSmith: 74,
-                  aneagoie: 30,
-                  Dhaval1403: 19,
-                  anantankur: 11,
-                };
-
-                if (prevContributions[user.login] !== undefined) {
-                  contributorsList[index].contributions += prevContributions[user.login];
-                }
-
+              {sortedList.map((user, index) => {
                 return (
                   <a
                     key={index}
