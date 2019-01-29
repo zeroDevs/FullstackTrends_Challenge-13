@@ -7,6 +7,7 @@ class Modal extends Component {
     this.state = {
       show: false
     }
+    this.escFunction = this.escFunction.bind(this);
   }
 
   showModal = (event) => {
@@ -20,6 +21,20 @@ class Modal extends Component {
       show: false
     })
   }
+  
+  escFunction(event){
+      if(event.keyCode === 27){
+        this.setState({show:false});
+      }
+    }
+
+  componentDidMount(){
+      document.addEventListener("keydown", this.escFunction, false);
+    }
+
+  componentWillUnmount(){
+      document.removeEventListener("keydown", this.escFunction, false);
+    }
 
   render() {
 
