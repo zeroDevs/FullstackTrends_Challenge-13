@@ -39,7 +39,7 @@ const Contrib = ({ contributors }) => {
   return (
     <div>
       <div className="cFooterlink" data-toggle="modal" data-target="#contribModal">
-        & {sortedList.length} Other Contributors
+        & {sortedList.length} Contributors
       </div>
 
       <Modal data={sortedList} />
