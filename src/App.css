@@ -93,18 +93,16 @@ h2 {
 
 .chartHolder {
     display: grid;
-    grid-template-areas: "switchbox switchbox" "chart zoombox";
-    grid-template-columns: auto 125px;
+    grid-template-areas: "chart switchbox" "chart zoombox";
+    grid-template-columns: 90% 10%;
     align-items: center;
-}
-
-.chartWrapper {
-    width: 60vw;
 }
 
 .switchbox {
     grid-area: switchbox;
-    margin: 16px;
+    margin-left: -150px;
+    width: 200px;
+    align-self: flex-end;
 }
 
 .chartbox {
@@ -115,24 +113,39 @@ h2 {
 
 .zoombox {
     grid-area: zoombox;
-    transform: rotate(-90deg);
-    height: fit-content;
-    width: fit-content;
-    justify-self: start
+    justify-self: start;
+    margin-left: -150px;
+    width: 200px;
+    align-self: flex-start;
+}
+
+@media only screen and (max-width: 1100px) {
+    .chartHolder {
+        grid-template-areas: "chart chart" "switchbox zoombox";
+        grid-template-columns: 50% 50%;
+    }
+    .chartbox {
+        width: 60vw;
+        justify-self: center
+    }
+    .switchbox {
+        margin-left: 0;
+        width: 200px;
+        justify-self: center
+    }
+    .zoombox {
+        justify-self: center;
+        margin-left: 0;
+    }
 }
 
 .zoombox p {
-    transform: rotate(120deg);
-    font-size: 3rem;
     align-self: center;
-    color: #e24e42;
-    font-weight: 700;
-    margin-top: -30px;
     pointer-events: none;
+    margin: 15px 0 0 0;
 }
 
 .zoomSlider>div {
-    transform: rotate(90deg);
     font-size: 2em;
     color: #e24e42;
     padding: 0 10px
@@ -143,7 +156,6 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 200px;
 }
 
 #returnTop {

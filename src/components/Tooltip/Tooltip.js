@@ -7,7 +7,7 @@ const Tooltip = ({ children, tooltipText, position }) => {
     position = allowedPositions.indexOf(position) > -1 ? position : 'bottom';
 
     return (
-        <div className='pt-3 pb-3 tooltipContainer'>
+        <div className='tooltipContainer'>
             <div className={`tooltipTrigger ${position}`}>
                 {children}
                 <div className="tooltipTextContainer d-none">
