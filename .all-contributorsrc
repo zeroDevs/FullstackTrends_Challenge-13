@@ -170,6 +170,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Dromediansk",
+      "name": "Miroslav Pillar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/34217538?v=4",
+      "profile": "https://miroslavpillar.tk",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
