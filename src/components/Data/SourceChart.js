@@ -38,6 +38,9 @@ const SourceChart = ({ loveFunction }) => {
           legend: {
             position: true,
           },
+          layout: {
+            padding: 10,
+          }
           tooltips: {
             callbacks: {
               title(tooltipItem, data) {
