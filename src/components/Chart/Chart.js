@@ -1,6 +1,5 @@
 import React from 'react';
 import { Polar, Radar } from 'react-chartjs-2';
-import './Chart.css';
 const callbacks = {
   title(tooltipItem, data) {
     return data.labels[tooltipItem[0].index];
@@ -25,7 +24,7 @@ const Chart = ({ data, type, zoomLevel }) => {
     }
   }
   const options = {
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
     responsive: true,
     aspectRatio: 1,
     layout: {
