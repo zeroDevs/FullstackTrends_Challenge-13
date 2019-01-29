@@ -290,6 +290,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Scramblelock",
+      "name": "Marc Sakalauskas",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/42618353?v=4",
+      "profile": "http://www.scramblelock.com",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7
