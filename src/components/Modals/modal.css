@@ -1,0 +1,50 @@
+.modal-body .courseSubTitle {
+    color: var(--one)
+}
+.courseCard {
+    border-radius: 5px 5px 10px 10px;
+    border: 1px solid rgba(80, 80, 80, 0.322);
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.664);
+}
+
+.courseCard:hover {
+    -webkit-box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.22);
+}
+
+.courseCard p {
+    color: rgba(121, 121, 121, 0.589);
+    font-size: 14px;
+    text-align: left;
+    padding: 0 15px;
+}
+
+.courseCard h5 {
+    font-size: 20px;
+    color: var(--three);
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.courseCard img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    padding: 0 0 20px 20px;
+}
+
+.modal-header h5 {
+    margin: 0px;
+    color: var(--three)
+}
+
+.modal-body {
+    background: url(../../images/parallax.svg);
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

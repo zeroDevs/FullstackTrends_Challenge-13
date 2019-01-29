@@ -2,8 +2,8 @@ import React from 'react';
 import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo1alt.png';
-import Modal from '../Modal/Modal';
 import Contrib from './contributors';
+import Courses from './courses'
 
 const Footer = ({ contrib }) => (
   <footer>
@@ -11,11 +11,11 @@ const Footer = ({ contrib }) => (
     <div className="footer py-5">
       <div className="container">
         <div className="row">
-          <div className="col-md-5 col-xs-12">
+          <div className="col-md-9 col-xs-12 pr-5">
             <a className="navbar-brand pb-3" href="/#">
               <img src={logo} alt="logo" height="50" />
             </a>
-            <p className="text-muted text-left">
+            <p className="text-muted footDesc">
               Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile,
               Programming Languages and Backend
             </p>
@@ -36,21 +36,29 @@ const Footer = ({ contrib }) => (
             </div>
           </div>
 
-          <div className="credits col-md-7 col-xs-6">
-            <h5 className="pt-2">Brought to you by</h5>
-            <ul>
-              <Modal>
-                <li className="grow">Zero To Mastery</li>
-              </Modal>
+          <div className="credits col-md-3 col-xs-12">
+            
+            <div className="text-center">
+              <h5 className="pt-2">Brought to you by</h5>
+              <img src={require('../../images/ztm.png')} />
+              <Courses />
+              <Contrib contributors={contrib} />
+              <ul>
               <li className="grow">
-                <Contrib contributors={contrib} />
+                
+              </li>
+              <li className="grow">
+                
               </li>
             </ul>
+            </div>
+            
+ 
           </div>
         </div>
       </div>
     </div>
-  
+
     <div className="copyright">
       © {new Date().getFullYear()} FullStack Trends. All Rights Reserved
     </div>
