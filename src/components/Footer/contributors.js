@@ -17,7 +17,7 @@ const Contrib = ({ contributors }) => {
     if (user.login !== 'allcontributors[bot]') {
       if (prevContribs[user.login] !== undefined) user.contributions += prevContribs[user.login]
       return user;
-    }
+    }else return null;
   })
 
   // Used to inject Dhaval previous stats, if he is unable to make a new PR
