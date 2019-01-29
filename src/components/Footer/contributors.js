@@ -7,7 +7,9 @@ const Contrib = ({ contributors }) => {
   return (
     <div>
       <div className="cFooterlink" data-toggle="modal" data-target="#contribModal">
-        <li>& {contributorsList.length} Other Contributors</li>
+        <ul>
+          <li>& {contributorsList.length} Other Contributors</li>
+        </ul>
       </div>
 
       <div

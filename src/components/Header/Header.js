@@ -4,9 +4,9 @@ import './Header.css';
 import logo from '../../images/logo1.png';
 
 const Header = () => (
-  <section>
-    <nav id="header" className="navbar navbar-expand-lg navbar-light fixed-top">
-      <Link to="top" smooth duration={800} offset={-131} className="logo-link">
+  <header className="fixed-top">
+    <nav id="header" className="navbar navbar-expand-lg navbar-light">
+      <Link to="top" smooth duration={800} offset={-131} className="logo-link navbar-brand">
         <img src={logo} alt="logo" className="logo-active" />
       </Link>
       <button
@@ -26,7 +26,7 @@ const Header = () => (
         <div className="navbar-nav nav-buttons">
           <Link
             to="newsletter"
-            className="button-primary"
+            className="button-primary nav-item"
             spy
             activeClass="active"
             smooth
@@ -37,7 +37,7 @@ const Header = () => (
           </Link>
           <Link
             to="data"
-            className="button-primary"
+            className="button-primary nav-item"
             spy
             activeClass="active"
             smooth
@@ -49,7 +49,7 @@ const Header = () => (
         </div>
       </div>
     </nav>
-  </section>
+  </header>
 );
 
 export default Header;

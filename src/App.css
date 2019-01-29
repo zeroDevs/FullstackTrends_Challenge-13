@@ -48,12 +48,6 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid var(--one);
 }
 
-.collapse.show {
-    background: rgba(255, 255, 255, 0.9);
-    margin-top: 17px;
-    border-radius: 0px 0px 8px 8px;
-}
-
 .title {
     font-family: 'Raleway', sans-serif;
     margin-bottom: 25px;
