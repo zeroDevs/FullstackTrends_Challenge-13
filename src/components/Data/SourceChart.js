@@ -13,10 +13,10 @@ const data = {
         'rgba(231,233,237,0.7)',
         'rgba(54,162,235,0.7)',
       ],
-      label: 'Some Dataset',
+      label: 'Some Dataset!!!!',
     },
   ],
-  labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand'],
+  labels: ['Global demand as a % of total jobs in category', 'US demand as a % of total jobs in category', 'Startup demand as a % of total jobs in category', 'Remote demand as a % of total jobs in category'],
 };
 
 const SourceChart = ({ loveFunction }) => {
@@ -24,9 +24,9 @@ const SourceChart = ({ loveFunction }) => {
   let screenWidth = window.innerWidth;
   return (
     <div>
-      <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys, etc..'>
+      <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys'>
         <h5 className="pr-1">Developer Love:</h5>
-        <h5 className="pl-1 anim-waving">{hearts}</h5>
+        <h5 className="pl-1">{hearts}</h5>
       </Tooltip>
       <Polar
         data={ data }
