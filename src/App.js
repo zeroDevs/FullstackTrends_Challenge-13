@@ -36,9 +36,11 @@ const navToggler = document.getElementsByClassName('navbar-toggler');
 // Toggles the header background color to match the collapsible nav when using the navbar-toggler
 const headerToggle = () => {
     const header = document.querySelector('header');
-	// const nav = document.querySelector('#header');
     return header.classList.toggle('is-open');
-	// return ;
+
+// 	const header = document.querySelector('#header');
+// 	return header.classList.toggle('show');
+
 }
 
 const dataExtractor = (catIndex) => {
@@ -202,7 +204,6 @@ class App extends Component {
 							</div>
 
 							<div className="zoombox">
-
 								<div className="zoomSlider">
 									<div>-</div><input className="slider" type="range" min="1" max={minimZoom} step="1" onChange={this.zoom} /><div>+</div>
 								</div>

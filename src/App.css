@@ -138,12 +138,12 @@ h2 {
 }
 
 .chartHolder {
-  display: grid;
-  grid-template-areas:
-    'switchbox switchbox'
-    'chart zoombox';
-  grid-template-columns: auto 100px;
-  align-items: center;
+    display: grid;
+    grid-template-areas: 
+      "switchbox switchbox"
+      "chart zoombox";
+    grid-template-columns: auto 100px;
+    align-items: center;
 }
 .chartWrapper {
   width: 60vw;
@@ -176,7 +176,7 @@ h2 {
   margin-top: -40px;
 }
 
-.zoomSlider > div {
+.zoomSlider>div {
   transform: rotate(90deg);
   font-size: 2em;
   color: #e24e42;
