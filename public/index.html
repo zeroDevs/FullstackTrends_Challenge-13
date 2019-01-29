@@ -1,74 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#EB6E80" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-<head>
-  <meta charset="utf-8">
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#EB6E80">
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <!-- Search Engine -->
+    <meta
+      name="description"
+      content="Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile, Programming Languages, Backend"
+    />
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Full Stack Trends" />
+    <meta
+      itemprop="description"
+      content="Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile, Programming Languages, Backend"
+    />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Full Stack Trends" />
+    <meta
+      name="twitter:description"
+      content="Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile, Programming Languages, Backend"
+    />
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Full Stack Trends" />
+    <meta
+      name="og:description"
+      content="Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile, Programming Languages, Backend"
+    />
+    <meta name="og:url" content="https://www.fullstacktrends.com" />
+    <meta name="og:site_name" content="Full Stack Trends" />
+    <meta name="og:type" content="website" />
 
-  <!-- Search Engine -->
-  <meta name="description" content="Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile, Programming Languages, Backend">
-  <!-- Schema.org for Google -->
-  <meta itemprop="name" content="Full Stack Trends">
-  <meta itemprop="description" content="Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile, Programming Languages, Backend">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Full Stack Trends">
-  <meta name="twitter:description" content="Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile, Programming Languages, Backend">
-  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-  <meta name="og:title" content="Full Stack Trends">
-  <meta name="og:description" content="Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile, Programming Languages, Backend">
-  <meta name="og:url" content="https://www.fullstacktrends.com">
-  <meta name="og:site_name" content="Full Stack Trends">
-  <meta name="og:type" content="website">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"
+    />
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-    crossorigin="anonymous">
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <!--  Font link  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono|Comfortaa:300|Roboto+Condensed"
+      rel="stylesheet"
+    />
 
-  <!--  Font link  -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Comfortaa:300|Roboto+Condensed" rel="stylesheet">
+    <title>Full Stack Trends</title>
+  </head>
 
-  <title>Full Stack Trends</title>
-</head>
+  <body>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <div id="root"></div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"
+  ></script>
 
-<body>
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root"></div>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-  crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-  crossorigin="anonymous"></script>
+  <!-- MailerLite Universal -->
+  <script>
+    (function(m, a, i, l, e, r) {
+      m['MailerLiteObject'] = e;
+      function f() {
+        var c = { a: arguments, q: [] };
+        var r = this.push(c);
+        return 'number' != typeof r ? r : f.bind(c.q);
+      }
+      f.q = f.q || [];
+      m[e] = m[e] || f.bind(f.q);
+      m[e].q = m[e].q || f.q;
+      r = a.createElement(i);
+      var _ = a.getElementsByTagName(i)[0];
+      r.async = 1;
+      r.src = l + '?v' + ~~(new Date().getTime() / 1000000);
+      _.parentNode.insertBefore(r, _);
+    })(
+      window,
+      document,
+      'script',
+      'https://static.mailerlite.com/js/universal.js',
+      'ml'
+    );
 
-<!-- MailerLite Universal -->
-<script>
-  (function (m, a, i, l, e, r) {
-    m['MailerLiteObject'] = e; function f() {
-      var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
-    }
-    f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
-    var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
-    _.parentNode.insertBefore(r, _);
-  })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-
-  var ml_account = ml('accounts', '1252504', 'i9w0t9r0s7', 'load');
-</script>
-<!-- End MailerLite Universal -->
-<script>
-  window.onscroll = () => {
-    const nav = document.querySelector('#header');
-    if (this.scrollY <= 10) nav.classList = 'navbar navbar-expand-lg navbar-light fixed-top'; else nav.className = 'navbar navbar-expand-lg navbar-light fixed-top scroll smLogo';
-  };
-</script>
-
+    var ml_account = ml('accounts', '1252504', 'i9w0t9r0s7', 'load');
+  </script>
+  <!-- End MailerLite Universal -->
+  <script>
+    window.onscroll = () => {
+      const nav = document.querySelector('header nav');
+      const header = document.querySelector('header');
+      if (this.scrollY <= 10) {
+        nav.classList = 'navbar navbar-expand-lg navbar-light fixed-top';
+        header.className = 'fixed-top';
+      } else {
+        nav.className =
+          'navbar navbar-expand-lg navbar-light fixed-top scroll smLogo';
+        header.className = 'fixed-top scroll';
+      }
+    };
+  </script>
 </html>
