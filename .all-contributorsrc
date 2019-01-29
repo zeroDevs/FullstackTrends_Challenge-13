@@ -196,6 +196,15 @@
         "code",
         "ideas"
       ]
+    },
+    {
+      "login": "gmagnenat",
+      "name": "Gwenaël Magnenat",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/924127?v=4",
+      "profile": "https://github.com/gmagnenat",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
