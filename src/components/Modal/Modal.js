@@ -7,6 +7,7 @@ class Modal extends Component {
     this.state = {
       show: false
     }
+    this.escFunction = this.escFunction.bind(this);
   }
 
   showModal = (event) => {
@@ -20,6 +21,20 @@ class Modal extends Component {
       show: false
     })
   }
+  
+  escFunction(event){
+      if(event.keyCode === 27){
+        this.setState({show:false});
+      }
+    }
+
+  componentDidMount(){
+      document.addEventListener("keydown", this.escFunction, false);
+    }
+
+  componentWillUnmount(){
+      document.removeEventListener("keydown", this.escFunction, false);
+    }
 
   render() {
 
@@ -111,7 +126,7 @@ class Modal extends Component {
                 <br/><br/>
 
                 <div className="courses" style={coursesStyle}>
-                  <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/" style={courseStyle}>
+                  <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/?couponCode=LEVELUPZTM" style={courseStyle}>
                     <div className="zeroToMastery">
                       <img src={require("../../images/courses/zerotomastery.jpg")} alt="zerotomastery" style={courseImageStyle}/>
                       <h5>The Complete Web Developer in 2019: Zero to Mastery</h5>
@@ -119,7 +134,7 @@ class Modal extends Component {
                     </div>
                   </a>
 
-                  <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/" style={courseStyle}>
+                  <a href="https://www.udemy.com/the-complete-junior-to-senior-web-developer-roadmap/?couponCode=LEVELUPSN2019" style={courseStyle}>
                     <div className="juniorToSenior">
                       <img src={require("../../images/courses/j2s.jpg")} alt="juniortosenior" style={courseImageStyle}/>
                       <h5>The Complete Junior to Senior Web Developer Roadmap (2019)</h5>
@@ -131,7 +146,7 @@ class Modal extends Component {
                     </div>
                   </a>
 
-                  <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/" style={courseStyle}>
+                  <a href="https://www.udemy.com/master-the-coding-interview-data-structures-algorithms/?couponCode=LEVELUPZTM" style={courseStyle}>
                     <div className="codingInterview">
                       <img src={require("../../images/courses/mastering-interviews.jpg")} alt="masteringinterviews" style={courseImageStyle}/>
                       <h5>Master the Coding Interview: Data Structures + Algorithms</h5>

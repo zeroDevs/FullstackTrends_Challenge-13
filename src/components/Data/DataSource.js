@@ -32,7 +32,7 @@ const DataSource = ({ loveFunction }) => (
       )) }
       <div className="zone purple tooltip1 text-center">
         <div className="top">
-          <h5>Other</h5>
+          <h5>+Others</h5>
           <i />
         </div>
         <div className="more">...</div>

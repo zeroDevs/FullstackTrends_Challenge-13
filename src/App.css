@@ -91,49 +91,6 @@ h2 {
     z-index: -1;
 }
 
-.anim-waving img {
-    animation-name: waving;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-}
-
-.anim-waving img:nth-child(1) {
-    -webkit-animation-delay: 0.25s;
-    animation-delay: 0.25s;
-}
-
-.anim-waving img:nth-child(2) {
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-}
-
-.anim-waving img:nth-child(3) {
-    -webkit-animation-delay: 0.75s;
-    animation-delay: 0.75s;
-}
-
-.anim-waving img:nth-child(4) {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-}
-
-.anim-waving img:nth-child(5) {
-    -webkit-animation-delay: 1.25s;
-    animation-delay: 1.25s;
-}
-
-@keyframes waving {
-    0% {
-        transform: translate(0, 0px);
-    }
-    50% {
-        transform: translate(0, -0.5rem);
-    }
-    100% {
-        transform: translate(0, 0px);
-    }
-}
-
 .chartHolder {
     display: grid;
     grid-template-areas: "chart switchbox" "chart zoombox";
