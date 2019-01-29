@@ -14,6 +14,7 @@
   .trends {
     padding: 10px;
   }
+
   .ranked-langs {
     padding-bottom: 1rem !important;
   }
@@ -126,9 +127,11 @@ h2 {
   0% {
     transform: translate(0, 0px);
   }
+
   50% {
     transform: translate(0, -0.5rem);
   }
+
   100% {
     transform: translate(0, 0px);
   }
@@ -136,21 +139,91 @@ h2 {
 
 .chartHolder {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    'switchbox switchbox'
+    'chart zoombox';
+  grid-template-columns: auto 100px;
+  align-items: center;
+}
+.chartWrapper {
+  width: 60vw;
 }
 
-.chartHolder .toolbox {
-  justify-self: left;
+.switchbox {
+  grid-area: switchbox;
+  margin: 16px;
+}
+
+.chartbox {
+  grid-area: chart;
+  width: 60vw;
+}
+
+.zoombox {
+  grid-area: zoombox;
+  transform: rotate(-90deg);
+  height: fit-content;
+  width: fit-content;
+  /* width: 60vh; */
+}
+
+.zoombox p {
+  transform: rotate(120deg);
+  font-size: 3rem;
   align-self: center;
+  color: #e24e42;
+  font-weight: 700;
+  margin-top: -40px;
+}
+
+.zoomSlider > div {
+  transform: rotate(90deg);
+  font-size: 2em;
+  color: #e24e42;
+  margin: 8px;
+}
+.zoomSlider {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  margin-top: -40px;
+}
+
+/* .chartHolder .toolbox {
+    justify-self: left;
+    align-self: center
 }
 
 .chartHolder .toolbox .zoomSlider {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  align-items: center;
+  align-items: center
 }
 
-.chartHolder .toolbox .zoomSlider > span {
-  font-size: 1.5em;
-  color: #2b2a2a;
+.chartHolder .toolbox .zoomSlider>span {
+    font-size: 1.5em;
+    color: #2B2A2A;
+} */
+
+#returnTop {
+  /* display: none; */
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  z-index: 99;
+  text-align: center;
+  color: var(--one);
+  padding: 4px 15px;
+  border-radius: 15px;
+  /* border: 1px solid var(--one); */
+  margin: 0 10px;
+  background: transparent;
+  cursor: pointer !important;
+}
+
+#returnTop:hover {
+  background-color: var(--three);
+  border-color: var(--three);
+  color: white;
+  text-decoration: none;
 }

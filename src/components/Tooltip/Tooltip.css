@@ -11,11 +11,12 @@
     min-width: 300px;
     transform: translate(-50%, 0);
     top: 50px;
-    left: 35vw;
+    left: 50%;
+    z-index: 2;
 }
 
 .source-chart .tooltipTextContainer {
-    left: 16vw;
+    left: 50%;
 }
 
 .tooltipText {
@@ -80,6 +81,7 @@
         left: 30vw;
     }
 }
+
 @media (max-width: 568px) {
     .source-chart .tooltipTextContainer {
         left: 35vw;
