@@ -10,6 +10,7 @@ import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
 import Heart from './images/svg-bgs/heart.svg';
 import Switch from './components/Switch/Switch';
+import { Link } from 'react-scroll';
 //dynamically import files
 const Footer = React.lazy(() => import('./components/Footer/Footer'));
 
@@ -180,10 +181,18 @@ class App extends Component {
 		});
 	}
 
+	handleScroll = () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("returnTop").style.display = "block";
+        } else {
+          document.getElementById("returnTop").style.display = "none";
+        }
+	}
+	  
 	render() {
 		const { cData, rawData, currentTopic, contributors, chartChoice, zoomLevel, minimZoom } = this.state;
 		return (
-			<div id="top" ref={(ref) => this.scrollIcon = ref}>
+				<div id="top">
 				<Header />
 				<Navigation onNavClick={this.onNavClick} currentCategoryIndex={currentCatIndexGlobal} />
 				<section className="trends">
@@ -202,7 +211,6 @@ class App extends Component {
 							<div className="chartbox">
 							<Chart data={cData} type={chartChoice} zoomLevel={zoomLevel} />
 							</div>
-
 							<div className="zoombox">
 								<div className="zoomSlider">
 									<div>-</div><input className="slider" type="range" min="1" max={minimZoom} step="1" onChange={this.zoom} /><div>+</div>
@@ -217,6 +225,15 @@ class App extends Component {
 				<Suspense fallback={<div>Loading...</div>}>
 					<Footer contrib={contributors} />
 				</Suspense>
+				<Link
+					id="returnTop"
+					to="top"
+					smooth
+					duration={800}
+					offset={-131}
+				>
+					Top
+				</Link>
 			</div>
 		);
 	}
