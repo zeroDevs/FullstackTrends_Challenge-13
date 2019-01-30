@@ -20,8 +20,9 @@
     background-color: var(--one);
     border-radius: 50%;
     left: -15px;
-    top: -4.5px;
+    top: -6px;
     transition: all 0.5s;
+    z-index: 0;
 }
 
 .switch input:checked+.lever::before {
