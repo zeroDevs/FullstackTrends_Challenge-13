@@ -36,7 +36,10 @@ const Chart = ({ data, type, zoomLevel }) => {
     },
     style
   }
-  const chart = type==="Polar"?<Polar data={data} options={Object.assign({startAngle: -0.75*Math.PI},options)}/> : <Radar data={data} options={options}/>;
+  const screenWidth = window.innerWidth;
+  const height = (screenWidth <= 550) ? (400) : 'auto'
+  const width = (screenWidth <= 550) ? (400) : 'auto'
+  const chart = type==="Polar"?<Polar data={data} height={height} width={width} options={Object.assign({startAngle: -0.75*Math.PI},options)}/> : <Radar data={data} height={height} width={width} options={options}/>;
   return (
     <div className="chart-wrapper">
       {data === undefined ? (
