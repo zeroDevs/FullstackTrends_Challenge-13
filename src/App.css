@@ -128,7 +128,7 @@ h2 {
     margin: 0 5px
 }
 
-@media (pointer:coarse) {
+@media (hover:none) {
     .chartbox .legend {
         display: grid;
     }
