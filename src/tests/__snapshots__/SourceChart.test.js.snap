@@ -1,0 +1,403 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render SourceChart component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SourceChart
+    loveFunction={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Tooltip
+          tooltipText="This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys"
+        >
+          <h5
+            className="pr-1"
+          >
+            Developer Love:
+          </h5>
+          <h5
+            className="pl-1"
+          />
+        </Tooltip>,
+        <Polar
+          data={
+            Object {
+              "datasets": Array [
+                Object {
+                  "backgroundColor": Array [
+                    "rgba(255,99,132,0.7)",
+                    "rgba(75,192,192,0.7)",
+                    "rgba(255,206,86,0.7)",
+                    "rgba(231,233,237,0.7)",
+                    "rgba(54,162,235,0.7)",
+                  ],
+                  "data": Array [
+                    11,
+                    16,
+                    9,
+                    14,
+                  ],
+                  "label": "Some Dataset!!!!",
+                },
+              ],
+              "labels": Array [
+                "Global demand as a % of total jobs in category",
+                "US demand as a % of total jobs in category",
+                "Startup demand as a % of total jobs in category",
+                "Remote demand as a % of total jobs in category",
+              ],
+            }
+          }
+          height={400}
+          options={
+            Object {
+              "legend": Object {
+                "position": true,
+              },
+              "maintainAspectRatio": true,
+              "responsive": false,
+              "tooltips": Object {
+                "backgroundColor": "rgba(0,0,0,0.7)",
+                "bodyFontColor": "#fff",
+                "bodyFontSize": 12,
+                "callbacks": Object {
+                  "label": [Function],
+                  "title": [Function],
+                },
+                "displayColors": true,
+                "padding": 5,
+                "titleFontColor": "#fff",
+                "titleFontSize": 12,
+              },
+            }
+          }
+          width={400}
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <h5
+              className="pr-1"
+            >
+              Developer Love:
+            </h5>,
+            <h5
+              className="pl-1"
+            />,
+          ],
+          "tooltipText": "This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Developer Love:",
+              "className": "pr-1",
+            },
+            "ref": null,
+            "rendered": "Developer Love:",
+            "type": "h5",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "pl-1",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h5",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "data": Object {
+            "datasets": Array [
+              Object {
+                "backgroundColor": Array [
+                  "rgba(255,99,132,0.7)",
+                  "rgba(75,192,192,0.7)",
+                  "rgba(255,206,86,0.7)",
+                  "rgba(231,233,237,0.7)",
+                  "rgba(54,162,235,0.7)",
+                ],
+                "data": Array [
+                  11,
+                  16,
+                  9,
+                  14,
+                ],
+                "label": "Some Dataset!!!!",
+              },
+            ],
+            "labels": Array [
+              "Global demand as a % of total jobs in category",
+              "US demand as a % of total jobs in category",
+              "Startup demand as a % of total jobs in category",
+              "Remote demand as a % of total jobs in category",
+            ],
+          },
+          "height": 400,
+          "options": Object {
+            "legend": Object {
+              "position": true,
+            },
+            "maintainAspectRatio": true,
+            "responsive": false,
+            "tooltips": Object {
+              "backgroundColor": "rgba(0,0,0,0.7)",
+              "bodyFontColor": "#fff",
+              "bodyFontSize": 12,
+              "callbacks": Object {
+                "label": [Function],
+                "title": [Function],
+              },
+              "displayColors": true,
+              "padding": 5,
+              "titleFontColor": "#fff",
+              "titleFontSize": 12,
+            },
+          },
+          "width": 400,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Tooltip
+            tooltipText="This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys"
+          >
+            <h5
+              className="pr-1"
+            >
+              Developer Love:
+            </h5>
+            <h5
+              className="pl-1"
+            />
+          </Tooltip>,
+          <Polar
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "rgba(255,99,132,0.7)",
+                      "rgba(75,192,192,0.7)",
+                      "rgba(255,206,86,0.7)",
+                      "rgba(231,233,237,0.7)",
+                      "rgba(54,162,235,0.7)",
+                    ],
+                    "data": Array [
+                      11,
+                      16,
+                      9,
+                      14,
+                    ],
+                    "label": "Some Dataset!!!!",
+                  },
+                ],
+                "labels": Array [
+                  "Global demand as a % of total jobs in category",
+                  "US demand as a % of total jobs in category",
+                  "Startup demand as a % of total jobs in category",
+                  "Remote demand as a % of total jobs in category",
+                ],
+              }
+            }
+            height={400}
+            options={
+              Object {
+                "legend": Object {
+                  "position": true,
+                },
+                "maintainAspectRatio": true,
+                "responsive": false,
+                "tooltips": Object {
+                  "backgroundColor": "rgba(0,0,0,0.7)",
+                  "bodyFontColor": "#fff",
+                  "bodyFontSize": 12,
+                  "callbacks": Object {
+                    "label": [Function],
+                    "title": [Function],
+                  },
+                  "displayColors": true,
+                  "padding": 5,
+                  "titleFontColor": "#fff",
+                  "titleFontSize": 12,
+                },
+              }
+            }
+            width={400}
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <h5
+                className="pr-1"
+              >
+                Developer Love:
+              </h5>,
+              <h5
+                className="pl-1"
+              />,
+            ],
+            "tooltipText": "This is a score out of 5 based on developer opinion, community size, downloads, google searches, and satisfaction surveys",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Developer Love:",
+                "className": "pr-1",
+              },
+              "ref": null,
+              "rendered": "Developer Love:",
+              "type": "h5",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "pl-1",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h5",
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "data": Object {
+              "datasets": Array [
+                Object {
+                  "backgroundColor": Array [
+                    "rgba(255,99,132,0.7)",
+                    "rgba(75,192,192,0.7)",
+                    "rgba(255,206,86,0.7)",
+                    "rgba(231,233,237,0.7)",
+                    "rgba(54,162,235,0.7)",
+                  ],
+                  "data": Array [
+                    11,
+                    16,
+                    9,
+                    14,
+                  ],
+                  "label": "Some Dataset!!!!",
+                },
+              ],
+              "labels": Array [
+                "Global demand as a % of total jobs in category",
+                "US demand as a % of total jobs in category",
+                "Startup demand as a % of total jobs in category",
+                "Remote demand as a % of total jobs in category",
+              ],
+            },
+            "height": 400,
+            "options": Object {
+              "legend": Object {
+                "position": true,
+              },
+              "maintainAspectRatio": true,
+              "responsive": false,
+              "tooltips": Object {
+                "backgroundColor": "rgba(0,0,0,0.7)",
+                "bodyFontColor": "#fff",
+                "bodyFontSize": 12,
+                "callbacks": Object {
+                  "label": [Function],
+                  "title": [Function],
+                },
+                "displayColors": true,
+                "padding": 5,
+                "titleFontColor": "#fff",
+                "titleFontSize": 12,
+              },
+            },
+            "width": 400,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

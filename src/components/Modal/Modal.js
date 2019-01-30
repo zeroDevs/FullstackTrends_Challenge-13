@@ -7,6 +7,10 @@ class Modal extends Component {
     this.state = {
       show: false
     }
+<<<<<<< HEAD
+=======
+    this.escFunction = this.escFunction.bind(this);
+>>>>>>> 100eace3565e315c71ca95fe23246490e48cc60f
   }
 
   showModal = (event) => {
@@ -20,6 +24,23 @@ class Modal extends Component {
       show: false
     })
   }
+<<<<<<< HEAD
+=======
+  
+  escFunction(event){
+      if(event.keyCode === 27){
+        this.setState({show:false});
+      }
+    }
+
+  componentDidMount(){
+      document.addEventListener("keydown", this.escFunction, false);
+    }
+
+  componentWillUnmount(){
+      document.removeEventListener("keydown", this.escFunction, false);
+    }
+>>>>>>> 100eace3565e315c71ca95fe23246490e48cc60f
 
   render() {
 
@@ -36,6 +57,10 @@ class Modal extends Component {
 
     // The modal "window"
     const modalStyle = {
+<<<<<<< HEAD
+=======
+      fontFamily: 'Comfortaa, sans-serif',
+>>>>>>> 100eace3565e315c71ca95fe23246490e48cc60f
       backgroundColor: '#fff',
       textAlign: 'justify',
       borderRadius: 5,
@@ -110,7 +135,11 @@ class Modal extends Component {
                 <br/><br/>
 
                 <div className="courses" style={coursesStyle}>
+<<<<<<< HEAD
                   <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/" style={courseStyle}>
+=======
+                  <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/?couponCode=LEVELUPZTM" style={courseStyle}>
+>>>>>>> 100eace3565e315c71ca95fe23246490e48cc60f
                     <div className="zeroToMastery">
                       <img src={require("../../images/courses/zerotomastery.jpg")} alt="zerotomastery" style={courseImageStyle}/>
                       <h5>The Complete Web Developer in 2019: Zero to Mastery</h5>
@@ -118,7 +147,11 @@ class Modal extends Component {
                     </div>
                   </a>
 
+<<<<<<< HEAD
                   <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/" style={courseStyle}>
+=======
+                  <a href="https://www.udemy.com/the-complete-junior-to-senior-web-developer-roadmap/?couponCode=LEVELUPSN2019" style={courseStyle}>
+>>>>>>> 100eace3565e315c71ca95fe23246490e48cc60f
                     <div className="juniorToSenior">
                       <img src={require("../../images/courses/j2s.jpg")} alt="juniortosenior" style={courseImageStyle}/>
                       <h5>The Complete Junior to Senior Web Developer Roadmap (2019)</h5>
@@ -130,7 +163,11 @@ class Modal extends Component {
                     </div>
                   </a>
 
+<<<<<<< HEAD
                   <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/" style={courseStyle}>
+=======
+                  <a href="https://www.udemy.com/master-the-coding-interview-data-structures-algorithms/?couponCode=LEVELUPZTM" style={courseStyle}>
+>>>>>>> 100eace3565e315c71ca95fe23246490e48cc60f
                     <div className="codingInterview">
                       <img src={require("../../images/courses/mastering-interviews.jpg")} alt="masteringinterviews" style={courseImageStyle}/>
                       <h5>Master the Coding Interview: Data Structures + Algorithms</h5>

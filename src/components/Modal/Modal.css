@@ -18,5 +18,12 @@
 
 .modalWindow {
   transition: 0.8s ease-in;
+<<<<<<< HEAD
 
+=======
+}
+
+.modalWindow h5 {
+  color: rgb(226, 78, 66);
+>>>>>>> 100eace3565e315c71ca95fe23246490e48cc60f
 }
