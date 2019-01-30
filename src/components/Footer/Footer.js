@@ -37,23 +37,12 @@ const Footer = ({ contrib }) => (
           </div>
 
           <div className="credits col-md-3 col-xs-12">
-            
             <div className="text-center">
               <h5 className="pt-2">Brought to you by</h5>
               <img src={require('../../images/ztm.png')} alt="ZTM logo" />
               <Courses />
               <Contrib contributors={contrib} />
-              <ul>
-              <li className="grow">
-                
-              </li>
-              <li className="grow">
-                
-              </li>
-            </ul>
             </div>
-            
- 
           </div>
         </div>
       </div>
