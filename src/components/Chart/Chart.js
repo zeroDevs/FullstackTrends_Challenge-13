@@ -19,8 +19,7 @@ const Chart = ({ data, type, zoomLevel }) => {
       stepSize: 5
     },
     pointLabels: {
-      fontColor: 'black',
-      fontSize: 16
+      display: false,
     }
   }
   const options = {

@@ -111,6 +111,29 @@ h2 {
     justify-self: end
 }
 
+.chartbox .legend {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr
+}
+
+.chartbox .legend>span {
+    color: black;
+    font-size: 1em;
+}
+
+.chartbox .legend>span>div {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px
+}
+
+@media (pointer:coarse) {
+    .chartbox .legend {
+        display: grid;
+    }
+}
+
 .zoombox {
     grid-area: zoombox;
     justify-self: start;
@@ -119,18 +142,57 @@ h2 {
     align-self: flex-start;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
     .chartHolder {
         grid-template-areas: "chart chart" "switchbox zoombox";
         grid-template-columns: 50% 50%;
     }
     .chartbox {
-        width: 60vw;
         justify-self: center
+    }
+    .chartbox .legend {
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+    }
+    .chartbox .legend>span {
+        font-size: .7em;
+    }
+    .chartbox .legend>span:first-child {
+        justify-self: end;
+    }
+    .chartbox .legend>span:nth-child(3) {
+        justify-self: end;
     }
     .switchbox {
         margin-left: 0;
-        width: 200px;
+        justify-self: center
+    }
+    .zoombox {
+        justify-self: center;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .chartHolder {
+        grid-template-areas: "chart chart" "zoombox zoombox" "switchbox switchbox";
+        grid-template-columns: 50% 50%;
+    }
+    .chartbox {
+        justify-self: center;
+    }
+    .chartbox .legend {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .chartbox .legend>span:first-child {
+        justify-self: center;
+    }
+    .chartbox .legend>span:nth-child(3) {
+        justify-self: center;
+    }
+    .switchbox {
+        margin-left: 0;
         justify-self: center
     }
     .zoombox {
