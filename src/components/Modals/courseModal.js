@@ -38,7 +38,7 @@ const CourseModals = () => {
                             <h5 className="text-center text-dark">Click any course to get started!</h5>
                         </div>
 
-                        <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/">
+                        <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/?couponCode=LEVELUPZTM">
                         <div className="courseCard row">
                             <div className="col-sm-12"><h5>The Complete Web Developer: Zero to Mastery</h5></div>
                             <div className="col-sm-4 p-0"><img src={one} className="d-none d-sm-block w-100" alt="Course 1" /></div>
@@ -48,7 +48,7 @@ const CourseModals = () => {
                         </div>
                         </a>
 
-                        <a href="https://www.udemy.com/the-complete-junior-to-senior-web-developer-roadmap/">
+                        <a href="https://www.udemy.com/the-complete-junior-to-senior-web-developer-roadmap/?couponCode=LEVELUPZTM">
                         <div className="courseCard row">
                             <div className="col-sm-12"><h5>Junior to Senior Web Developer Roadmap</h5></div>
                             <div className="col-sm-4 p-0"><img src={two} className="d-none d-sm-block w-100" alt="Course 2" /></div>
@@ -61,7 +61,7 @@ const CourseModals = () => {
                         </div>
                         </a>
 
-                        <a href="https://www.udemy.com/master-the-coding-interview-data-structures-algorithms/">
+                        <a href="https://www.udemy.com/master-the-coding-interview-data-structures-algorithms/?couponCode=LEVELUPZTM">
                         <div className="courseCard row">
                             <div className="col-sm-12"><h5>Master the Coding Interview: Data Structures + Algorithms</h5></div>
                             <div className="col-sm-4 p-0"><img src={three} className="d-none d-sm-block w-100" alt="Course 3" /></div>
