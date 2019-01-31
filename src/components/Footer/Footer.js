@@ -3,7 +3,7 @@ import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo-alt.png';
 import Contrib from './contributors';
-import Courses from './courses'
+import Courses from './courses';
 
 const Footer = ({ contrib }) => (
   <footer>
@@ -36,31 +36,6 @@ const Footer = ({ contrib }) => (
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div className="credits col-md-7 col-xs-6">
-            <h5 className="pt-2">Brought to you by</h5>
-            <ul>
-              <Modal>
-                <li className="grow">Zero To Mastery</li>
-              </Modal>
-<<<<<<< HEAD
-              <a href="https://github.com/anantankur" target="_blank" rel="noopener noreferrer">
-                <li className="grow">Ankur Anant</li>
-              </a>
-              <a href="https://github.com/Dhaval1403" target="_blank" rel="noopener noreferrer">
-                <li className="grow">Dhaval Mehta</li>
-              </a>
-              <a href="https://github.com/MattCSmith" target="_blank" rel="noopener noreferrer">
-                <li className="grow">Matt Smith</li>
-              </a>
-              <Contrib contributors={contrib} />
-=======
-              <li className="grow">
-                <Contrib contributors={contrib} />
-              </li>
->>>>>>> 100eace3565e315c71ca95fe23246490e48cc60f
-            </ul>
-=======
           <div className="credits col-md-3 col-xs-12">
             <div className="text-center">
               <h5 className="pt-2">Brought to you by</h5>
@@ -68,7 +43,6 @@ const Footer = ({ contrib }) => (
               <Courses />
               <Contrib contributors={contrib} />
             </div>
->>>>>>> dafbe6d05cc43bea313aef1d43fcb24d406de43e
           </div>
         </div>
       </div>
