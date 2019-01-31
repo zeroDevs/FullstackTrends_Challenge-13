@@ -26,6 +26,7 @@ footer .socials i:hover {
 }
 .credits li:hover {
     color: #8d8d8d;
+    cursor: pointer;
 }
 .credits a {
     text-decoration: none;

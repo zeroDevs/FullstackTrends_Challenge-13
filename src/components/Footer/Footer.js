@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
-import logo from '../../images/logo1alt.png';
+import logo from '../../images/logo-alt.png';
 import Contrib from './contributors';
 import Courses from './courses'
 
