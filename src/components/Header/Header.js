@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import './Header.css';
-import logo from '../../images/logo1.png';
+import logo from '../../images/logo.png';
 
 const Header = () => (
   <header className="fixed-top">

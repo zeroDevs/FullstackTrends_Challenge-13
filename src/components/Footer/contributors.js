@@ -1,6 +1,6 @@
 import React from 'react';
 import './contributors.css';
-import Modal from '../Modals/contribBody';
+import Modal from '../Modals/contribModal';
 
 const Contrib = ({ contributors }) => {
 <<<<<<< HEAD
@@ -42,6 +42,7 @@ const Contrib = ({ contributors }) => {
 
   return (
     <div>
+<<<<<<< HEAD
       <div className="cFooterlink" data-toggle="modal" data-target="#contribModal">
 <<<<<<< HEAD
         <li>& {contributorsList.length} Other Contributors</li>
@@ -108,6 +109,10 @@ const Contrib = ({ contributors }) => {
       </div>
 =======
         & {sortedList.length} Other Contributors
+=======
+      <div data-toggle="modal" data-target="#contribModal">
+        <li>& {sortedList.length} Contributors</li>
+>>>>>>> dafbe6d05cc43bea313aef1d43fcb24d406de43e
       </div>
 
       <Modal data={sortedList} />

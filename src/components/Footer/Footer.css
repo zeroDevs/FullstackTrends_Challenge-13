@@ -19,15 +19,24 @@ footer .socials i:hover {
 }
 .credits li {
     list-style-type: none;
-    color: #8d8d8d;
+    color: var(--one);
     font-family: 'Comfortaa', cursive;
     font-size: 15px;
+    text-align: center
 }
 .credits li:hover {
-    color: var(--one);
+    color: #8d8d8d;
+    cursor: pointer;
 }
 .credits a {
     text-decoration: none;
+}
+.credits img{
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.281);
+    width: 40%;
+    margin: 0 0 10px 0;
 }
 
 .copyright {
@@ -61,10 +70,15 @@ footer .socials i:hover {
     .credits ul {
         padding: 0!important
     }
+    .footer .footDesc {
+        text-align: center!important
+    }
   }
   @media only screen and (min-width: 767px) {
     .footer .credits {
         text-align: right
     }
-
+    .footDesc {
+        width: 50%
+    }
 }

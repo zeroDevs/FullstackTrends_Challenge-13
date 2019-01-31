@@ -205,7 +205,13 @@ class App extends Component {
 						</Tooltip>
 						<div className="chartHolder">
 							<div className="chartbox">
-							<Chart data={cData} type={chartChoice} zoomLevel={zoomLevel} />
+								<Chart data={cData} type={chartChoice} zoomLevel={zoomLevel} />
+								<div className="legend">
+									<span><div style={{backgroundColor: backgroundColors[0]}}></div>{`Global Job Demand`}</span>
+									<span><div style={{backgroundColor: backgroundColors[1]}}></div>{`US Job Demand`}</span>
+									<span><div style={{backgroundColor: backgroundColors[2]}}></div>{`Startup Job Demand`}</span>
+									<span><div style={{backgroundColor: backgroundColors[3]}}></div>{`Remote Job Demand`}</span>
+								</div>
 							</div>
 							<div className="switchbox">
 								<p>Chart type</p>
