@@ -12,7 +12,7 @@ const Footer = ({ contrib }) => (
       <div className="container">
         <div className="row">
           <div className="col-md-9 col-xs-12 pr-5">
-            <a className="navbar-brand pb-3" href="/#">
+            <a className="navbar-brand pb-3" href="/">
               <img src={logo} alt="logo" height="50" />
             </a>
             <p className="text-muted footDesc">
