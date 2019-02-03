@@ -180,6 +180,16 @@ class App extends Component {
 			zoomLevel: 100 - Number(event.target.value)
 		});
 	}
+	handleZoomIncrement = () => {
+		this.setState({
+			zoomLevel: this.state.zoomLevel + 5
+		});
+	}
+	handleZoomDecrement = () => {
+		this.setState({
+			zoomLevel: this.state.zoomLevel - 5
+		});
+	}
 
 	handleScroll = () => {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -220,7 +230,7 @@ class App extends Component {
 							<div className="zoombox">
 								<p>Zoom</p>
 								<div className="zoomSlider">
-									<div>-</div><input className="slider" type="range" min="1" max={minimZoom} step="1" onChange={this.zoom} style={{zIndex: 1}}/><div>+</div>
+									<div onClick={() => this.handleZoomIncrement()}>-</div><input className="slider" type="range" value={100 - this.state.zoomLevel} min="1" max={minimZoom} step="1" onChange={this.zoom} style={{zIndex: 1}}/><div  onClick={() => this.handleZoomDecrement()}>+</div>
 								</div>
 							</div>
 						</div>
