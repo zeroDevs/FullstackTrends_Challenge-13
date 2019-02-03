@@ -140,7 +140,7 @@ h2 {
     margin-left: -150px;
     width: 200px;
     align-self: flex-start;
-    z-index: 1000;
+    z-index: 1;
 }
 
 @media only screen and (max-width: 1200px) {
